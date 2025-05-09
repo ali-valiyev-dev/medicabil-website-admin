@@ -1,102 +1,110 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
-      <q-toolbar>
-        <q-btn
-          flat
-          dense
-          round
-          icon="menu"
-          aria-label="Menu"
-          @click="toggleLeftDrawer"
-        />
-
-        <q-toolbar-title>
-          Quasar App
-        </q-toolbar-title>
-
-        <div>Quasar v{{ $q.version }}</div>
-      </q-toolbar>
-    </q-header>
+  <q-layout view="hHh lpR fFf">
+    <Header v-model:drawerLeft="drawerLeft" v-model:drawerRight="drawerRight" />
 
     <q-drawer
-      v-model="leftDrawerOpen"
-      show-if-above
+      v-model="drawerLeft"
       bordered
+      mini-to-overlay
+      show-if-above
+      :mini="miniState"
+      @mouseenter="miniState = false"
+      @mouseleave="miniState = true"
+      :breakpoint="1024"
+      :width="$q.screen.lt.sm ? $q.screen.width : 250"
     >
-      <q-list>
-        <q-item-label
-          header
-        >
-          Essential Links
-        </q-item-label>
+      <q-btn
+        unelevated
+        dense
+        icon="close"
+        class="lt-md q-ma-sm z-max no-padding absolute-top-right"
+        @click="drawer = false"
+      />
+      <LeftMenuList />
+    </q-drawer>
 
-        <EssentialLink
-          v-for="link in linksList"
-          :key="link.title"
-          v-bind="link"
-        />
-      </q-list>
+    <q-drawer
+      side="right"
+      v-model="drawerRight"
+      bordered
+      overlay
+      :breakpoint="1024"
+      :width="$q.screen.lt.sm ? $q.screen.width : 350"
+    >
+      <q-scroll-area class="fit">
+        <div class="row no-wrap items-center justify-between q-pa-md">
+          <div class="text-h6">Genel Ayarlar</div>
+          <q-btn unelevated round dense icon="close" @click="drawerRight = false" />
+        </div>
+        <q-separator />
+        <q-list padding>
+          <q-item>
+            <q-item-section>
+              <q-item-label>Cache</q-item-label>
+            </q-item-section>
+            <q-item-section side>
+              <q-btn noCaps rounded label="Temizle" icon-right="delete" color="red" unelevated />
+            </q-item-section>
+          </q-item>
+          <q-item>
+            <q-item-section>
+              <q-item-label>SITEMAP</q-item-label>
+            </q-item-section>
+            <q-item-section side>
+              <q-btn
+                noCaps
+                rounded
+                label="Güncelle"
+                icon-right="autorenew"
+                color="green"
+                unelevated
+              />
+            </q-item-section>
+          </q-item>
+          <q-item>
+            <q-item-section>
+              <q-item-label>Debug Mode Aç/Kapat</q-item-label>
+            </q-item-section>
+            <q-item-section side>
+              <q-checkbox v-model="debugMode" />
+            </q-item-section>
+          </q-item>
+        </q-list>
+      </q-scroll-area>
     </q-drawer>
 
     <q-page-container>
       <router-view />
     </q-page-container>
+
+    <q-page-scroller class="gt-md" position="bottom-right" :scroll-offset="300" :offset="[30, 80]">
+      <q-btn
+        unelevated
+        rounded
+        padding="md"
+        icon="keyboard_double_arrow_up"
+        aria-label="Scroll to top"
+        class="bg-secondary text-white"
+      />
+    </q-page-scroller>
   </q-layout>
 </template>
 
 <script setup>
 import { ref } from 'vue'
-import EssentialLink from 'components/EssentialLink.vue'
+import { useQuasar } from 'quasar'
+import { LeftMenuList, Header } from 'src/components'
 
-const linksList = [
-  {
-    title: 'Docs',
-    caption: 'quasar.dev',
-    icon: 'school',
-    link: 'https://quasar.dev'
-  },
-  {
-    title: 'Github',
-    caption: 'github.com/quasarframework',
-    icon: 'code',
-    link: 'https://github.com/quasarframework'
-  },
-  {
-    title: 'Discord Chat Channel',
-    caption: 'chat.quasar.dev',
-    icon: 'chat',
-    link: 'https://chat.quasar.dev'
-  },
-  {
-    title: 'Forum',
-    caption: 'forum.quasar.dev',
-    icon: 'record_voice_over',
-    link: 'https://forum.quasar.dev'
-  },
-  {
-    title: 'Twitter',
-    caption: '@quasarframework',
-    icon: 'rss_feed',
-    link: 'https://twitter.quasar.dev'
-  },
-  {
-    title: 'Facebook',
-    caption: '@QuasarFramework',
-    icon: 'public',
-    link: 'https://facebook.quasar.dev'
-  },
-  {
-    title: 'Quasar Awesome',
-    caption: 'Community Quasar projects',
-    icon: 'favorite',
-    link: 'https://awesome.quasar.dev'
-  }
-]
+const $q = useQuasar()
 
-const leftDrawerOpen = ref(false)
-
-function toggleLeftDrawer () {
-  leftDrawerOpen.value = !leftDrawerOpen.value
-}
+const drawerLeft = ref(false)
+const drawerRight = ref(false)
+const miniState = ref($q.screen.gt.md)
+const debugMode = ref(false)
 </script>
+
+<style>
+.b {
+  border: 1px solid red;
+}
+</style>
