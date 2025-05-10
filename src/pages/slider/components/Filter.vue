@@ -24,6 +24,8 @@
       class="date-input col q-mr-md q-px-md rounded-borders"
     >
       <template v-slot:append>
+        <q-icon name="cancel" class="cursor-pointer q-mr-xs" @click="form.date = null" />
+
         <q-icon name="event" color="secondary" class="cursor-pointer">
           <q-popup-proxy cover transition-show="scale" transition-hide="scale">
             <q-date v-model="form.date" mask="DD.MM.YYYY" range minimal>
