@@ -15,7 +15,7 @@
         v-for="col in props.cols"
         :key="col.name"
         :props="props"
-        class="text-white bg-light-blue-9"
+        class="text-body1 text-white bg-light-blue-9"
       >
         {{ col.label }}
       </q-th>
