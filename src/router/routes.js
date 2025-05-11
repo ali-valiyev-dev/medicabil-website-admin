@@ -6,10 +6,7 @@ const routes = [
       { path: '', component: () => import('pages/dashboard/index.vue') },
       {
         path: 'slider',
-        children: [
-          { path: '', component: () => import('pages/slider/index.vue') },
-          { path: 'add', component: () => import('pages/slider/add/index.vue') },
-        ],
+        children: [{ path: '', component: () => import('pages/slider/index.vue') }],
       },
     ],
   },

@@ -46,6 +46,14 @@
       </q-td>
     </template>
 
+    <template v-slot:body-cell-date="props">
+      <q-td :props="props">
+        <div class="text-body2 text-grey-9">
+          {{ format(new Date(props.row.date), 'dd.MM.yyyy') }}
+        </div>
+      </q-td>
+    </template>
+
     <template v-slot:body-cell-actions="props">
       <q-td :props="props" style="width: 200px">
         <q-btn
@@ -98,56 +106,51 @@ nextOrder.value =
   sliderData?.length > 0 ? Math.max(...sliderData.map((slide) => slide.order)) + 1 : 1
 
 const columns = ref([
-  {
-    name: 'title',
-    required: true,
-    label: 'Başlık',
-    align: 'left',
-    field: 'title',
-  },
+  { name: 'title', label: 'Başlık', align: 'left', field: 'title' },
   { name: 'description', label: 'Açıklama', align: 'left', field: 'description' },
   { name: 'image', label: 'Görsel', align: 'center', field: 'image' },
   { name: 'status', label: 'Durum', align: 'center', field: 'status' },
   { name: 'order', label: 'Sıralama', align: 'center', field: 'order' },
-  {
-    name: 'date',
-    label: 'Tarih',
-    align: 'center',
-    field: 'date',
-  },
+  { name: 'date', label: 'Tarih', align: 'center', field: 'date' },
   { name: 'actions', label: 'İşlem', align: 'center' },
 ])
 
 const filteredRows = computed(() => {
+  const { title, statusFilter, sortOrder, date } = form.value
   let filtered = rows.value
 
-  if (form.value.title) {
-    filtered = filtered.filter((row) => normalize(row.title).includes(normalize(form.value.title)))
+  if (title) {
+    filtered = filtered.filter((row) => normalize(row.title).includes(normalize(title)))
   }
 
-  if (form.value.statusFilter !== 'Hepsi') {
-    filtered = filtered.filter((row) => row.status === form.value.statusFilter)
+  if (statusFilter !== 'Hepsi') {
+    filtered = filtered.filter((row) => row.status === statusFilter)
   }
 
-  if (form.value.sortOrder === 'Yüksek Öncelikten') {
+  if (sortOrder === 'Yüksek Öncelikten') {
     filtered = filtered.sort((a, b) => b.order - a.order)
-  } else if (form.value.sortOrder === 'Düşük Öncelikten') {
+  } else if (sortOrder === 'Düşük Öncelikten') {
     filtered = filtered.sort((a, b) => a.order - b.order)
   }
 
-  if (form.value.date) {
-    if (typeof form.value.date === 'string') {
+  if (date) {
+    if (typeof date === 'string') {
       filtered = filtered.filter((row) => {
         const rowDate = format(new Date(row.date), 'dd.MM.yyyy')
-        return rowDate === form.value.date
+        return rowDate === date
       })
-    } else if (form.value.date.from && form.value.date.to) {
-      const from = parse(form.value.date.from, 'dd.MM.yyyy', new Date())
-      const to = parse(form.value.date.to, 'dd.MM.yyyy', new Date())
+    } else if (date.from && date.to) {
+      const from = parse(date.from, 'dd.MM.yyyy', new Date())
+      const to = parse(date.to, 'dd.MM.yyyy', new Date())
 
       filtered = filtered.filter((row) => {
         const rowDate = new Date(row.date)
-        return isWithinInterval(rowDate, { start: from, end: to })
+        const adjustedTo = new Date(to)
+
+        return isWithinInterval(rowDate, {
+          start: from,
+          end: adjustedTo.setDate(adjustedTo.getDate() + 1),
+        })
       })
     }
   }

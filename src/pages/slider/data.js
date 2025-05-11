@@ -6,7 +6,7 @@ export const sliderData = [
     image: '/slide.jpg',
     status: 'Aktif',
     order: 1,
-    date: '01.05.2025',
+    date: '2025-05-01',
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ export const sliderData = [
     image: '/slide.jpg',
     status: 'Aktif',
     order: 2,
-    date: '02.05.2025',
+    date: '2025-05-02',
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ export const sliderData = [
     image: '/slide.jpg',
     status: 'Devre dışı',
     order: 3,
-    date: '03.05.2025',
+    date: '2025-05-03',
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ export const sliderData = [
     image: '/slide.jpg',
     status: 'Aktif',
     order: 4,
-    date: '04.05.2025',
+    date: '2025-05-04',
   },
   {
     id: 5,
@@ -42,7 +42,7 @@ export const sliderData = [
     image: '/slide.jpg',
     status: 'Devre dışı',
     order: 5,
-    date: '05.05.2025',
+    date: '2025-05-05',
   },
   {
     id: 6,
@@ -51,7 +51,7 @@ export const sliderData = [
     image: '/slide.jpg',
     status: 'Aktif',
     order: 6,
-    date: '06.05.2025',
+    date: '2025-05-06',
   },
   {
     id: 7,
@@ -60,7 +60,7 @@ export const sliderData = [
     image: '/slide.jpg',
     status: 'Aktif',
     order: 7,
-    date: '07.05.2025',
+    date: '2025-05-07',
   },
   {
     id: 8,
@@ -69,7 +69,7 @@ export const sliderData = [
     image: '/slide.jpg',
     status: 'Devre dışı',
     order: 8,
-    date: '08.05.2025',
+    date: '2025-05-08',
   },
   {
     id: 9,
@@ -78,7 +78,7 @@ export const sliderData = [
     image: '/slide.jpg',
     status: 'Aktif',
     order: 9,
-    date: '09.05.2025',
+    date: '2025-05-09',
   },
   {
     id: 10,
@@ -87,6 +87,6 @@ export const sliderData = [
     image: '/slide.jpg',
     status: 'Aktif',
     order: 10,
-    date: '10.05.2025',
+    date: '2025-05-10',
   },
 ]
