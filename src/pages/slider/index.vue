@@ -14,7 +14,7 @@
 
     <Filter />
     <Table />
-    <AddSlideDialog />
+    <AddSlideDialog v-if="dialogStore.showDialog" />
   </q-page>
 </template>
 

@@ -23,7 +23,7 @@
 
     <template v-slot:body-cell="props">
       <q-td :props="props">
-        <div class="text-body2 text-grey-8">
+        <div class="text-body2 text-grey-9">
           {{ props.row[props.col.field] }}
         </div>
       </q-td>
@@ -69,6 +69,14 @@
         />
       </q-td>
     </template>
+
+    <template #no-data>
+      <div class="full-width text-center flex items-center text-grey-8">
+        <div class="row items-center q-mx-auto text-body1 q-py-sm">
+          <q-icon name="warning" size="sm" color="warning" class="q-mr-xs" /> Sonuç bulunamadı
+        </div>
+      </div>
+    </template>
   </q-table>
 </template>
 
@@ -96,7 +104,6 @@ const columns = ref([
     label: 'Başlık',
     align: 'left',
     field: 'title',
-    sortable: false,
   },
   { name: 'description', label: 'Açıklama', align: 'left', field: 'description' },
   { name: 'image', label: 'Görsel', align: 'center', field: 'image' },
@@ -107,9 +114,6 @@ const columns = ref([
     label: 'Tarih',
     align: 'center',
     field: 'date',
-    format: (val) => {
-      return format(new Date(val), 'dd.MM.yyyy')
-    },
   },
   { name: 'actions', label: 'İşlem', align: 'center' },
 ])

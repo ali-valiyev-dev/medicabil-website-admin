@@ -75,7 +75,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { onMounted, ref } from 'vue'
 import { useDialogStore } from 'src/stores/dialogStore'
 
 const dialogStore = useDialogStore()
@@ -97,6 +97,10 @@ const addSlide = () => {
   console.log('Form data:', form.value)
   dialogStore.closeDialog()
 }
+
+onMounted(() => {
+  console.log('Dialog mounted')
+})
 </script>
 
 <style scoped>
