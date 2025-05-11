@@ -21,9 +21,28 @@
       </q-th>
     </template>
 
+    <template v-slot:body-cell="props">
+      <q-td :props="props">
+        <div class="text-body2 text-grey-8">
+          {{ props.row[props.col.field] }}
+        </div>
+      </q-td>
+    </template>
+
     <template v-slot:body-cell-image="props">
       <q-td :props="props">
         <q-img :src="props.row.image" alt="Görsel" />
+      </q-td>
+    </template>
+
+    <template v-slot:body-cell-status="props">
+      <q-td :props="props">
+        <div
+          class="text-body2"
+          :class="props.row.status === 'Aktif' ? 'text-green' : 'text-grey-8'"
+        >
+          {{ props.row.status }}
+        </div>
       </q-td>
     </template>
 
@@ -59,18 +78,30 @@ import { format, isWithinInterval, parse } from 'date-fns'
 import { sliderData } from '../data'
 import { normalize } from 'src/utils/helpers'
 import { useFilterStore } from 'src/stores/filterStore'
+import { useDialogStore } from 'src/stores/dialogStore'
 import { storeToRefs } from 'pinia'
 
 const { form } = storeToRefs(useFilterStore())
+const { nextOrder } = storeToRefs(useDialogStore())
 
 const rows = ref(sliderData)
 
+nextOrder.value =
+  sliderData?.length > 0 ? Math.max(...sliderData.map((slide) => slide.order)) + 1 : 1
+
 const columns = ref([
-  { name: 'title', required: true, label: 'Başlık', align: 'left', field: 'title', sortable: true },
-  { name: 'description', label: 'Açıklama', align: 'left', field: 'description', sortable: true },
-  { name: 'image', label: 'Görsel', align: 'center', field: 'image', sortable: false },
-  { name: 'status', label: 'Durum', align: 'center', field: 'status', sortable: true },
-  { name: 'order', label: 'Sıralama', align: 'center', field: 'order', sortable: true },
+  {
+    name: 'title',
+    required: true,
+    label: 'Başlık',
+    align: 'left',
+    field: 'title',
+    sortable: false,
+  },
+  { name: 'description', label: 'Açıklama', align: 'left', field: 'description' },
+  { name: 'image', label: 'Görsel', align: 'center', field: 'image' },
+  { name: 'status', label: 'Durum', align: 'center', field: 'status' },
+  { name: 'order', label: 'Sıralama', align: 'center', field: 'order' },
   {
     name: 'date',
     label: 'Tarih',
@@ -79,7 +110,6 @@ const columns = ref([
     format: (val) => {
       return format(new Date(val), 'dd.MM.yyyy')
     },
-    sortable: true,
   },
   { name: 'actions', label: 'İşlem', align: 'center' },
 ])

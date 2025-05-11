@@ -9,7 +9,7 @@ export const useFilterStore = defineStore('filter', () => {
     date: null,
   })
 
-  const resetForm = () => {
+  const resetFilters = () => {
     form.value = {
       title: '',
       statusFilter: 'Hepsi',
@@ -18,5 +18,5 @@ export const useFilterStore = defineStore('filter', () => {
     }
   }
 
-  return { form, resetForm }
+  return { form, resetFilters }
 })
