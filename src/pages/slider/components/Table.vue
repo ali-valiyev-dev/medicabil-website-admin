@@ -37,11 +37,8 @@
 
     <template v-slot:body-cell-status="props">
       <q-td :props="props">
-        <div
-          class="text-body2"
-          :class="props.row.status === 'Aktif' ? 'text-green' : 'text-grey-8'"
-        >
-          {{ props.row.status }}
+        <div class="text-body2" :class="props.row.isActive ? 'text-green' : 'text-grey-8'">
+          {{ props.row.isActive ? 'Aktif' : 'Devre dışı' }}
         </div>
       </q-td>
     </template>
@@ -64,7 +61,7 @@
           padding="xs md"
           color="secondary"
           class="q-mr-sm"
-          @click="editRow(row)"
+          @click="editRow(props.row)"
         />
         <q-btn
           label="Sil"
@@ -73,7 +70,7 @@
           dense
           padding="xs md"
           color="red-5"
-          @click="deleteRow(row)"
+          @click="deleteRow(props.row)"
         />
       </q-td>
     </template>
@@ -86,6 +83,8 @@
       </div>
     </template>
   </q-table>
+
+  <EditSlideDialog :row="selectedRow" v-if="showEditDialog" />
 </template>
 
 <script setup>
@@ -96,14 +95,16 @@ import { normalize } from 'src/utils/helpers'
 import { useFilterStore } from 'src/stores/filterStore'
 import { useDialogStore } from 'src/stores/dialogStore'
 import { storeToRefs } from 'pinia'
+import EditSlideDialog from './EditSlideDialog.vue'
 
 const { form } = storeToRefs(useFilterStore())
-const { nextOrder } = storeToRefs(useDialogStore())
-
-const rows = ref(sliderData)
+const { nextOrder, showEditDialog } = storeToRefs(useDialogStore())
 
 nextOrder.value =
   sliderData?.length > 0 ? Math.max(...sliderData.map((slide) => slide.order)) + 1 : 1
+
+const rows = ref(sliderData)
+const selectedRow = ref(null)
 
 const columns = ref([
   { name: 'title', label: 'Başlık', align: 'left', field: 'title' },
@@ -123,13 +124,15 @@ const filteredRows = computed(() => {
     filtered = filtered.filter((row) => normalize(row.title).includes(normalize(title)))
   }
 
-  if (statusFilter !== 'Hepsi') {
-    filtered = filtered.filter((row) => row.status === statusFilter)
+  if (statusFilter === 'Aktif') {
+    filtered = filtered.filter((row) => row.isActive === true)
+  } else if (statusFilter === 'Devre dışı') {
+    filtered = filtered.filter((row) => row.isActive === false)
   }
 
   if (sortOrder === 'Yüksek Öncelikten') {
     filtered = filtered.sort((a, b) => b.order - a.order)
-  } else if (sortOrder === 'Düşük Öncelikten') {
+  } else {
     filtered = filtered.sort((a, b) => a.order - b.order)
   }
 
@@ -159,7 +162,8 @@ const filteredRows = computed(() => {
 })
 
 function editRow(row) {
-  console.log('Edit:', row)
+  selectedRow.value = row
+  showEditDialog.value = true
 }
 
 function deleteRow(row) {

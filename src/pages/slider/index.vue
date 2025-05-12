@@ -8,20 +8,21 @@
         color="secondary"
         label="Slide Ekle"
         icon="add_photo_alternate"
-        @click="dialogStore.openDialog"
+        @click="showAddSlideDialog = true"
       />
     </q-card>
 
     <Filter />
     <Table />
-    <AddSlideDialog v-if="dialogStore.showDialog" />
+    <AddSlideDialog v-if="showAddSlideDialog" />
   </q-page>
 </template>
 
 <script setup>
+import { useDialogStore } from 'src/stores/dialogStore'
+import { storeToRefs } from 'pinia'
 import { Filter, Table, AddSlideDialog } from './components'
 import { PageHeader } from 'src/components'
-import { useDialogStore } from 'src/stores/dialogStore'
 
-const dialogStore = useDialogStore()
+const { showAddSlideDialog } = storeToRefs(useDialogStore())
 </script>

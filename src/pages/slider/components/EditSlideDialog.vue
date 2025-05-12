@@ -1,15 +1,15 @@
 <template>
-  <q-dialog v-model="showAddSlideDialog" persistent>
+  <q-dialog v-model="showEditDialog" persistent>
     <q-card class="full-width">
       <q-card-section>
-        <div class="text-h6 text-grey-9 q-mb-md">Yeni Slide Ekle</div>
+        <div class="text-h6 text-grey-9 q-mb-md">Düzenle</div>
         <q-form class="column">
-          <q-input v-model="form.title" label="Başlık" autogrow autofocus outlined />
+          <q-input v-model="form.title" label="Başlık" autogrow outlined />
 
-          <q-input v-model="form.description" label="Açıklama" type="textarea" outlined />
+          <q-input v-model="form.description" label="Açıklama" outlined />
 
           <q-uploader
-            v-model="form.image"
+            ref="uploaderRef"
             label="Dosyaları yüklemek için buraya bırakın"
             max-files="1"
             flat
@@ -52,7 +52,7 @@
           padding="sm lg"
           color="red-5"
           class="col"
-          @click="showAddSlideDialog = false"
+          @click="showEditDialog = false"
         />
 
         <q-btn
@@ -62,7 +62,7 @@
           dense
           padding="sm lg"
           color="secondary"
-          @click="addSlide"
+          @click="editSlide"
           class="col"
         />
       </q-card-actions>
@@ -71,26 +71,32 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import { useDialogStore } from 'src/stores/dialogStore'
 import { storeToRefs } from 'pinia'
 
-const { nextOrder, showAddSlideDialog } = storeToRefs(useDialogStore())
-
-const form = ref({
-  title: '',
-  date: new Date(),
-  description: '',
-  image: null,
-  targetLink: '',
-  buttonTitle: '',
-  order: nextOrder.value,
-  isActive: true,
+const props = defineProps({
+  row: Object,
 })
 
-const addSlide = () => {
+const { showEditDialog } = storeToRefs(useDialogStore())
+
+const form = ref({})
+const uploaderRef = ref(null)
+
+onMounted(async () => {
+  form.value = props.row
+
+  const response = await fetch(form.value.image)
+  const blob = await response.blob()
+  const file = new File([blob], form.value.image, { type: blob.type })
+
+  uploaderRef.value.addFiles([file])
+})
+
+const editSlide = () => {
   console.log('Form data:', form.value)
-  showAddSlideDialog.value = false
+  showEditDialog.value = false
 }
 </script>
 

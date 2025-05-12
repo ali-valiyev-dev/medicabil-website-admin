@@ -23,14 +23,7 @@
       label="Tarih Aralığı"
       class="date-input col q-mr-md q-px-md rounded-borders"
     >
-      <template v-slot:append>
-        <q-icon
-          v-if="form.date"
-          name="cancel"
-          class="cursor-pointer q-mr-xs"
-          @click="form.date = null"
-        />
-
+      <template v-slot:prepend>
         <q-icon name="event" color="secondary" class="cursor-pointer">
           <q-popup-proxy cover transition-show="scale" transition-hide="scale">
             <q-date v-model="form.date" mask="DD.MM.YYYY" range minimal>
@@ -40,6 +33,14 @@
             </q-date>
           </q-popup-proxy>
         </q-icon>
+      </template>
+      <template v-slot:append>
+        <q-icon
+          v-if="form.date"
+          name="cancel"
+          class="cursor-pointer q-mr-xs"
+          @click="form.date = null"
+        />
       </template>
     </q-input>
 
