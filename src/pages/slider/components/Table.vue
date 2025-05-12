@@ -85,6 +85,7 @@
   </q-table>
 
   <EditSlideDialog :row="selectedRow" v-if="showEditDialog" />
+  <DeleteSlideDialog :rowId="selectedRow.id" v-if="showDeleteDialog" />
 </template>
 
 <script setup>
@@ -95,10 +96,10 @@ import { normalize } from 'src/utils/helpers'
 import { useFilterStore } from 'src/stores/filterStore'
 import { useDialogStore } from 'src/stores/dialogStore'
 import { storeToRefs } from 'pinia'
-import EditSlideDialog from './EditSlideDialog.vue'
+import { EditSlideDialog, DeleteSlideDialog } from '../components'
 
 const { form } = storeToRefs(useFilterStore())
-const { nextOrder, showEditDialog } = storeToRefs(useDialogStore())
+const { nextOrder, showEditDialog, showDeleteDialog } = storeToRefs(useDialogStore())
 
 nextOrder.value =
   sliderData?.length > 0 ? Math.max(...sliderData.map((slide) => slide.order)) + 1 : 1
@@ -167,6 +168,7 @@ function editRow(row) {
 }
 
 function deleteRow(row) {
-  console.log('Delete:', row)
+  selectedRow.value = row
+  showDeleteDialog.value = true
 }
 </script>

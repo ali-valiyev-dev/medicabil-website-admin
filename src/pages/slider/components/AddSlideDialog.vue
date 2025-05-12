@@ -48,15 +48,16 @@
           label="İptal"
           no-caps
           unelevated
+          outline
           dense
           padding="sm lg"
-          color="red-5"
+          color="grey-9"
           class="col"
           @click="showAddSlideDialog = false"
         />
 
         <q-btn
-          label="Kaydet"
+          label="Ekle"
           no-caps
           unelevated
           dense

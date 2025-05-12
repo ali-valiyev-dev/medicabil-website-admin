@@ -5,10 +5,12 @@ export const useDialogStore = defineStore('dialog', () => {
   const nextOrder = ref(0)
   const showAddSlideDialog = ref(false)
   const showEditDialog = ref(false)
+  const showDeleteDialog = ref(false)
 
   return {
     nextOrder,
     showAddSlideDialog,
     showEditDialog,
+    showDeleteDialog,
   }
 })
