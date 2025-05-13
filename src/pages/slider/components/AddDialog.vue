@@ -4,9 +4,9 @@
       <q-card-section>
         <div class="text-h6 text-grey-9 q-mb-md">Yeni Ekle</div>
         <q-form class="column">
-          <q-input v-model="form.title" label="Başlık" autogrow autofocus outlined />
+          <q-input v-model="form.title" label="Başlık" autofocus outlined />
 
-          <q-input v-model="form.description" label="Açıklama" type="textarea" outlined />
+          <q-input v-model="form.description" label="Açıklama" outlined />
 
           <q-uploader
             v-model="form.image"
@@ -19,9 +19,9 @@
             thumbnail-fit="contain"
           />
 
-          <q-input v-model="form.targetLink" label="Hedef Bağlantı" autogrow outlined />
+          <q-input v-model="form.targetLink" label="Hedef Bağlantı" outlined />
 
-          <q-input v-model="form.buttonTitle" label="Buton Başlığı" autogrow outlined />
+          <q-input v-model="form.buttonTitle" label="Buton Başlığı" outlined />
 
           <div class="row no-wrap items-center">
             <q-input v-model="form.order" type="number" outlined class="col">

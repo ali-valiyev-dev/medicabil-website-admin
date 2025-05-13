@@ -6,7 +6,7 @@
         <q-form class="column">
           <q-input v-model="form.title" label="Başlık" autofocus outlined />
 
-          <q-input v-model="form.description" label="Açıklama" type="textarea" outlined />
+          <q-input v-model="form.description" label="Açıklama" outlined />
 
           <q-uploader
             v-model="form.image"
