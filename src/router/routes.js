@@ -24,6 +24,10 @@ const routes = [
         path: 'step-page',
         children: [{ path: '', component: () => import('pages/step-page/index.vue') }],
       },
+      {
+        path: 'news',
+        children: [{ path: '', component: () => import('pages/news/index.vue') }],
+      },
     ],
   },
 

@@ -83,6 +83,11 @@ const menuItems = ref([
     icon: 'fa-solid fa-shoe-prints',
     label: 'Adım Sayfası',
   },
+  {
+    to: '/news',
+    icon: 'fa-solid fa-newspaper',
+    label: 'Haber',
+  },
   // {
   //   icon: 'fa-solid fa-book-open',
   //   label: 'Rehber',

@@ -1,0 +1,112 @@
+export const sampleData = [
+  {
+    id: 1,
+    title: 'Meme Kanseri',
+    image: '/slide.jpg',
+    targetLink: 'https://dev.medicabil.com/tr/haber/',
+    content:
+      '### Meme Kanseri\nMeme kanseri hakkında detaylı bilgi almak için [tıklayın](https://dev.medicabil.com/tr/haber/).',
+    isActive: true,
+    order: 1,
+    date: '2025-05-01',
+  },
+  {
+    id: 2,
+    title: 'Uyku Laboratuvarı',
+    image: '/slide.jpg',
+    targetLink: 'https://dev.medicabil.com/tr/haber/',
+    content:
+      '### Uyku Laboratuvarı\nUyku laboratuvarı hizmetlerimiz hakkında bilgi almak için [tıklayın](https://dev.medicabil.com/tr/haber/).',
+    isActive: true,
+    order: 2,
+    date: '2025-05-02',
+  },
+  {
+    id: 3,
+    title: 'Saç Ekimi',
+    image: '/slide.jpg',
+    targetLink: 'https://dev.medicabil.com/tr/haber/',
+    content:
+      '### Saç Ekimi\nSaç ekimi işlemleri hakkında detaylı bilgi almak için [tıklayın](https://dev.medicabil.com/tr/haber/).',
+    isActive: false,
+    order: 3,
+    date: '2025-05-03',
+  },
+  {
+    id: 4,
+    title: 'Endoskopik Omurga Cerrahisi',
+    image: '/slide.jpg',
+    targetLink: 'https://dev.medicabil.com/tr/haber/',
+    content:
+      '### Endoskopik Omurga Cerrahisi\nOmurga cerrahisi hakkında detaylı bilgi almak için [tıklayın](https://dev.medicabil.com/tr/haber/).',
+    isActive: true,
+    order: 4,
+    date: '2025-05-04',
+  },
+  {
+    id: 5,
+    title: 'Doktor',
+    image: '/slide.jpg',
+    targetLink: 'https://dev.medicabil.com/tr/haber/',
+    content:
+      '### Doktorlarımız\nDoktorlarımız hakkında bilgi almak için [tıklayın](https://dev.medicabil.com/tr/haber/).',
+    isActive: false,
+    order: 5,
+    date: '2025-05-05',
+  },
+  {
+    id: 6,
+    title: 'Fizik Tedavi',
+    image: '/slide.jpg',
+    targetLink: 'https://dev.medicabil.com/tr/haber/',
+    content:
+      '### Fizik Tedavi\nFizik tedavi hizmetlerimiz hakkında bilgi almak için [tıklayın](https://dev.medicabil.com/tr/haber/).',
+    isActive: true,
+    order: 6,
+    date: '2025-05-06',
+  },
+  {
+    id: 7,
+    title: 'Check.Up',
+    image: '/slide.jpg',
+    targetLink: 'https://dev.medicabil.com/tr/haber/',
+    content:
+      '### Check.Up\nCheck.Up paketlerimiz hakkında bilgi almak için [tıklayın](https://dev.medicabil.com/tr/haber/).',
+    isActive: true,
+    order: 7,
+    date: '2025-05-07',
+  },
+  {
+    id: 8,
+    title: 'Ortopedi',
+    image: '/slide.jpg',
+    targetLink: 'https://dev.medicabil.com/tr/haber/',
+    content:
+      '### Ortopedi\nOrtopedi tedavilerimiz hakkında bilgi almak için [tıklayın](https://dev.medicabil.com/tr/haber/).',
+    isActive: false,
+    order: 8,
+    date: '2025-05-08',
+  },
+  {
+    id: 9,
+    title: 'Kardiyoloji',
+    image: '/slide.jpg',
+    targetLink: 'https://dev.medicabil.com/tr/haber/',
+    content:
+      '### Kardiyoloji\nKardiyoloji hizmetlerimiz hakkında bilgi almak için [tıklayın](https://dev.medicabil.com/tr/haber/).',
+    isActive: true,
+    order: 9,
+    date: '2025-05-09',
+  },
+  {
+    id: 10,
+    title: 'Diyetisyen',
+    image: '/slide.jpg',
+    targetLink: 'https://dev.medicabil.com/tr/haber/',
+    content:
+      '### Diyetisyen\nDiyetisyen hizmetlerimiz hakkında bilgi almak için [tıklayın](https://dev.medicabil.com/tr/haber/).',
+    isActive: true,
+    order: 10,
+    date: '2025-05-10',
+  },
+]
