@@ -66,7 +66,7 @@
               <q-item-label>Debug Mode Aç/Kapat</q-item-label>
             </q-item-section>
             <q-item-section side>
-              <q-checkbox v-model="debugMode" />
+              <q-checkbox color="secondary" v-model="debugMode" />
             </q-item-section>
           </q-item>
         </q-list>
