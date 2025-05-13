@@ -1,6 +1,6 @@
 <template>
   <q-form class="row q-mt-lg">
-    <q-input v-model="form.question" clearable label="Başlık" outlined class="col q-mr-md" />
+    <q-input v-model="form.question" clearable label="Soru" outlined class="col q-mr-md" />
     <q-select
       v-model="form.statusFilter"
       :options="statusOptions"
