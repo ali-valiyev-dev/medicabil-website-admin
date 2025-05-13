@@ -56,6 +56,18 @@ const menuItems = ref([
     icon: 'fa-solid fa-image',
     label: 'Slider',
   },
+  // {
+  //   icon: 'fa-solid fa-book-open',
+  //   label: 'Rehber',
+  //   children: [
+  //     { to: '/rehber/haberler', label: 'Haberler' },
+  //   ],
+  // },
+  {
+    to: '/faq',
+    icon: 'fa-solid fa-circle-question',
+    label: 'SSS',
+  },
   {
     to: '/center-of-excellence',
     icon: 'fa-solid fa-hospital',

@@ -9,6 +9,10 @@ const routes = [
         children: [{ path: '', component: () => import('pages/slider/index.vue') }],
       },
       {
+        path: 'faq',
+        children: [{ path: '', component: () => import('pages/faq/index.vue') }],
+      },
+      {
         path: 'center-of-excellence',
         children: [{ path: '', component: () => import('pages/center-of-excellence/index.vue') }],
       },
