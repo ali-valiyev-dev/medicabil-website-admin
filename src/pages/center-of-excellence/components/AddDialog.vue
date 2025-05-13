@@ -91,7 +91,13 @@
           </div>
 
           <div class="row no-wrap">
-            <q-input v-model="form.order" type="number" outlined class="col q-mr-md">
+            <q-input
+              v-model="form.order"
+              type="number"
+              outlined
+              class="q-mr-md"
+              style="max-width: 250px"
+            >
               <template #prepend>
                 <div class="text-body1">Sıralama Numarası:</div>
               </template>
@@ -104,7 +110,6 @@
               checked-icon="check"
               unchecked-icon="close"
               size="xl"
-              class="col flex-center"
             />
           </div>
         </q-form>

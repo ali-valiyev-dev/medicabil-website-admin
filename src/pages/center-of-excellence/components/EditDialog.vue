@@ -88,8 +88,14 @@
             <q-input v-model="form.buttonTitle" label="Buton Başlığı" outlined class="col" />
           </div>
 
-          <div class="row no-wrap items-center">
-            <q-input v-model="form.order" type="number" outlined class="col q-mr-md">
+          <div class="row no-wrap">
+            <q-input
+              v-model="form.order"
+              type="number"
+              outlined
+              class="q-mr-md"
+              style="max-width: 250px"
+            >
               <template #prepend>
                 <div class="text-body1">Sıralama Numarası:</div>
               </template>
@@ -102,7 +108,6 @@
               checked-icon="check"
               unchecked-icon="close"
               size="xl"
-              class="col flex-center"
             />
           </div>
         </q-form>

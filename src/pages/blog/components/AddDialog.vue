@@ -114,13 +114,19 @@
           </div>
 
           <div class="row no-wrap">
-            <q-input v-model="form.order" type="number" outlined class="col q-mr-md">
+            <q-input
+              v-model="form.order"
+              type="number"
+              outlined
+              class="q-mr-md"
+              style="max-width: 250px"
+            >
               <template #prepend>
                 <div class="text-body1">Sıralama Numarası:</div>
               </template>
             </q-input>
 
-            <div class="row no-wrap col">
+            <div class="row no-wrap q-gutter-md">
               <q-toggle
                 v-model="form.isActive"
                 :label="form.isActive ? 'Aktif' : 'Devre dışı'"
@@ -128,7 +134,6 @@
                 checked-icon="check"
                 unchecked-icon="close"
                 size="xl"
-                class="col"
               />
 
               <q-toggle
@@ -138,7 +143,6 @@
                 checked-icon="check"
                 unchecked-icon="close"
                 size="xl"
-                class="col"
               />
 
               <q-toggle
@@ -148,7 +152,6 @@
                 checked-icon="check"
                 unchecked-icon="close"
                 size="xl"
-                class="col"
               />
             </div>
           </div>
