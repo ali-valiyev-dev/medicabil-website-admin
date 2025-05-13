@@ -78,6 +78,11 @@ const menuItems = ref([
     icon: 'fa-solid fa-pen-nib',
     label: 'Blog',
   },
+  {
+    to: '/step-page',
+    icon: 'fa-solid fa-shoe-prints',
+    label: 'Adım Sayfası',
+  },
   // {
   //   icon: 'fa-solid fa-book-open',
   //   label: 'Rehber',
