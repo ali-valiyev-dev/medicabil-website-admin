@@ -1,4 +1,4 @@
-export const sliderData = [
+export const sampleData = [
   {
     id: 1,
     title: 'Meme Kanseri',

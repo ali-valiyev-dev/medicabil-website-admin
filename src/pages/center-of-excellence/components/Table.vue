@@ -91,7 +91,7 @@
 <script setup>
 import { ref, computed } from 'vue'
 import { format, isWithinInterval, parse } from 'date-fns'
-import { sliderData } from '../data'
+import { sampleData } from '../data'
 import { normalize } from 'src/utils/helpers'
 import { useFilterStore } from 'src/stores/filterStore'
 import { useCenterOfExcellenceStore } from 'src/stores/dialogs/centerOfExcellenceStore'
@@ -102,9 +102,9 @@ const { form } = storeToRefs(useFilterStore())
 const { nextOrder, showEditDialog, showDeleteDialog } = storeToRefs(useCenterOfExcellenceStore())
 
 nextOrder.value =
-  sliderData?.length > 0 ? Math.max(...sliderData.map((slide) => slide.order)) + 1 : 1
+  sampleData?.length > 0 ? Math.max(...sampleData.map((slide) => slide.order)) + 1 : 1
 
-const rows = ref(sliderData)
+const rows = ref(sampleData)
 const selectedRow = ref(null)
 
 const columns = ref([
