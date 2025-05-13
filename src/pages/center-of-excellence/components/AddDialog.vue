@@ -1,6 +1,6 @@
 <template>
   <q-dialog v-model="showAddDialog" persistent>
-    <q-card style="width: 100%; max-width: 1100px">
+    <q-card style="width: 100%; max-width: 1150px">
       <q-card-section>
         <div class="text-h6 text-grey-9 q-mb-md">Yeni Ekle</div>
         <q-form class="column">

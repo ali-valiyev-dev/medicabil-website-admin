@@ -1,6 +1,6 @@
 <template>
   <q-dialog v-model="showEditDialog" persistent>
-    <q-card style="width: 100%; max-width: 1100px">
+    <q-card style="width: 100%; max-width: 1150px">
       <q-card-section>
         <div class="text-h6 text-grey-9 q-mb-md">Düzenle</div>
         <q-form class="column">
@@ -9,7 +9,6 @@
             <q-input v-model="form.description" label="Açıklama" outlined class="col" />
           </div>
 
-          <!-- Editor with initial value as rendered HTML -->
           <q-editor
             v-model="form.content"
             paragraph-tag="p"
@@ -129,7 +128,7 @@
           dense
           padding="sm lg"
           color="secondary"
-          @click="editSlide"
+          @click="editItem"
           class="col-1"
         />
       </q-card-actions>
@@ -163,7 +162,7 @@ onMounted(async () => {
   uploaderRef.value.addFiles([file])
 })
 
-const editSlide = () => {
+const editItem = () => {
   console.log('Form data:', form.value)
   showEditDialog.value = false
 }

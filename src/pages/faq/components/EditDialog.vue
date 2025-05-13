@@ -1,6 +1,6 @@
 <template>
   <q-dialog v-model="showEditDialog" persistent>
-    <q-card style="width: 100%; max-width: 1100px">
+    <q-card style="width: 100%; max-width: 1150px">
       <q-card-section>
         <div class="text-h6 text-grey-9 q-mb-md">Düzenle</div>
         <q-form class="column">
@@ -112,7 +112,7 @@
           dense
           padding="sm lg"
           color="secondary"
-          @click="editSlide"
+          @click="editItem"
           class="col-1"
         />
       </q-card-actions>
@@ -139,7 +139,7 @@ onMounted(async () => {
   form.value.content = marked(form.value.content || '')
 })
 
-const editSlide = () => {
+const editItem = () => {
   console.log('Form data:', form.value)
   showEditDialog.value = false
 }

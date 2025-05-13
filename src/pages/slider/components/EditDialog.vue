@@ -63,7 +63,7 @@
           dense
           padding="sm lg"
           color="secondary"
-          @click="editSlide"
+          @click="editItem"
           class="col"
         />
       </q-card-actions>
@@ -95,7 +95,7 @@ onMounted(async () => {
   uploaderRef.value.addFiles([file])
 })
 
-const editSlide = () => {
+const editItem = () => {
   console.log('Form data:', form.value)
   showEditDialog.value = false
 }
