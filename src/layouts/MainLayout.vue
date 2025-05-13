@@ -43,7 +43,7 @@
               <q-item-label>Cache</q-item-label>
             </q-item-section>
             <q-item-section side>
-              <q-btn noCaps rounded label="Temizle" icon-right="delete" color="red" unelevated />
+              <q-btn noCaps rounded label="Temizle" icon-right="delete" color="red-5" unelevated />
             </q-item-section>
           </q-item>
           <q-item>
@@ -56,7 +56,7 @@
                 rounded
                 label="Güncelle"
                 icon-right="autorenew"
-                color="green"
+                color="secondary"
                 unelevated
               />
             </q-item-section>
@@ -102,9 +102,3 @@ const drawerRight = ref(false)
 const miniState = ref($q.screen.gt.md)
 const debugMode = ref(false)
 </script>
-
-<style>
-.b {
-  border: 1px solid red;
-}
-</style>

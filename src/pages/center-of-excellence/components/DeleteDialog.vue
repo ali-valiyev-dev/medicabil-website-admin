@@ -38,14 +38,14 @@
 </template>
 
 <script setup>
-import { useDialogStore } from 'src/stores/dialogStore'
+import { useCenterOfExcellenceStore } from 'src/stores/dialogs/centerOfExcellenceStore'
 import { storeToRefs } from 'pinia'
 
 const props = defineProps({
   rowId: Number,
 })
 
-const { showDeleteDialog } = storeToRefs(useDialogStore())
+const { showDeleteDialog } = storeToRefs(useCenterOfExcellenceStore())
 
 const deleteSlide = () => {
   console.log('Deleting slide with ID:', props.rowId)

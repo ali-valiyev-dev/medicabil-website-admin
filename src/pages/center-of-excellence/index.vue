@@ -1,7 +1,7 @@
 <template>
   <q-page padding>
     <q-card flat class="row justify-between">
-      <PageHeader :breadcrumbs="[{ label: 'Slider' }]" />
+      <PageHeader :breadcrumbs="[{ label: 'Center of Excellence' }]" />
       <q-btn
         unelevated
         noCaps
@@ -19,10 +19,10 @@
 </template>
 
 <script setup>
-import { useSlideDialogStore } from 'src/stores/dialogs/slideStore'
+import { useCenterOfExcellenceStore } from 'src/stores/dialogs/centerOfExcellenceStore'
 import { storeToRefs } from 'pinia'
 import { Filter, Table, AddDialog } from './components'
 import { PageHeader } from 'src/components'
 
-const { showAddDialog } = storeToRefs(useSlideDialogStore())
+const { showAddDialog } = storeToRefs(useCenterOfExcellenceStore())
 </script>

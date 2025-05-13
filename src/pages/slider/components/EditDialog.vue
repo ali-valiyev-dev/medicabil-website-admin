@@ -25,7 +25,7 @@
 
           <div class="row no-wrap items-center">
             <q-input v-model="form.order" type="number" outlined class="col">
-              <template v-slot:prepend>
+              <template #prepend>
                 <div class="text-body1">Sıralama Numarası:</div>
               </template>
             </q-input>
@@ -73,14 +73,14 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
-import { useDialogStore } from 'src/stores/dialogStore'
+import { useSlideDialogStore } from 'src/stores/dialogs/slideStore'
 import { storeToRefs } from 'pinia'
 
 const props = defineProps({
   row: Object,
 })
 
-const { showEditDialog } = storeToRefs(useDialogStore())
+const { showEditDialog } = storeToRefs(useSlideDialogStore())
 
 const form = ref({})
 const uploaderRef = ref(null)

@@ -1,8 +1,8 @@
 <template>
-  <q-dialog v-model="showAddSlideDialog" persistent>
+  <q-dialog v-model="showAddDialog" persistent>
     <q-card class="full-width">
       <q-card-section>
-        <div class="text-h6 text-grey-9 q-mb-md">Yeni Slide Ekle</div>
+        <div class="text-h6 text-grey-9 q-mb-md">Yeni Ekle</div>
         <q-form class="column">
           <q-input v-model="form.title" label="Başlık" autogrow autofocus outlined />
 
@@ -25,7 +25,7 @@
 
           <div class="row no-wrap items-center">
             <q-input v-model="form.order" type="number" outlined class="col">
-              <template v-slot:prepend>
+              <template #prepend>
                 <div class="text-body1">Sıralama Numarası:</div>
               </template>
             </q-input>
@@ -53,7 +53,7 @@
           padding="sm lg"
           color="grey-9"
           class="col"
-          @click="showAddSlideDialog = false"
+          @click="showAddDialog = false"
         />
 
         <q-btn
@@ -63,7 +63,7 @@
           dense
           padding="sm lg"
           color="secondary"
-          @click="addSlide"
+          @click="addItem"
           class="col"
         />
       </q-card-actions>
@@ -73,10 +73,10 @@
 
 <script setup>
 import { ref } from 'vue'
-import { useDialogStore } from 'src/stores/dialogStore'
+import { useSlideDialogStore } from 'src/stores/dialogs/slideStore'
 import { storeToRefs } from 'pinia'
 
-const { nextOrder, showAddSlideDialog } = storeToRefs(useDialogStore())
+const { nextOrder, showAddDialog } = storeToRefs(useSlideDialogStore())
 
 const form = ref({
   title: '',
@@ -89,9 +89,9 @@ const form = ref({
   isActive: true,
 })
 
-const addSlide = () => {
+const addItem = () => {
   console.log('Form data:', form.value)
-  showAddSlideDialog.value = false
+  showAddDialog.value = false
 }
 </script>
 

@@ -8,6 +8,10 @@ const routes = [
         path: 'slider',
         children: [{ path: '', component: () => import('pages/slider/index.vue') }],
       },
+      {
+        path: 'center-of-excellence',
+        children: [{ path: '', component: () => import('pages/center-of-excellence/index.vue') }],
+      },
     ],
   },
 

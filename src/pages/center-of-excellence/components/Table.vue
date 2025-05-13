@@ -94,12 +94,12 @@ import { format, isWithinInterval, parse } from 'date-fns'
 import { sliderData } from '../data'
 import { normalize } from 'src/utils/helpers'
 import { useFilterStore } from 'src/stores/filterStore'
-import { useSlideDialogStore } from 'src/stores/dialogs/slideStore'
+import { useCenterOfExcellenceStore } from 'src/stores/dialogs/centerOfExcellenceStore'
 import { storeToRefs } from 'pinia'
 import { EditDialog, DeleteDialog } from '../components'
 
 const { form } = storeToRefs(useFilterStore())
-const { nextOrder, showEditDialog, showDeleteDialog } = storeToRefs(useSlideDialogStore())
+const { nextOrder, showEditDialog, showDeleteDialog } = storeToRefs(useCenterOfExcellenceStore())
 
 nextOrder.value =
   sliderData?.length > 0 ? Math.max(...sliderData.map((slide) => slide.order)) + 1 : 1
