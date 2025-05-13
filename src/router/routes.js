@@ -16,6 +16,10 @@ const routes = [
         path: 'center-of-excellence',
         children: [{ path: '', component: () => import('pages/center-of-excellence/index.vue') }],
       },
+      {
+        path: 'blog',
+        children: [{ path: '', component: () => import('pages/blog/index.vue') }],
+      },
     ],
   },
 

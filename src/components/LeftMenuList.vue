@@ -73,6 +73,11 @@ const menuItems = ref([
     icon: 'fa-solid fa-hospital',
     label: 'Center Of Excellence',
   },
+  {
+    to: '/blog',
+    icon: 'fa-solid fa-pen-nib',
+    label: 'Blog',
+  },
   // {
   //   icon: 'fa-solid fa-book-open',
   //   label: 'Rehber',
