@@ -5,13 +5,8 @@
         <div class="text-h6 text-grey-9 q-mb-md">Düzenle</div>
         <q-form class="column">
           <div class="row no-wrap">
-            <q-input v-model="form.question" label="Soru" outlined class="col q-mr-md" />
-            <q-input
-              v-model="form.targetLink"
-              label="Hedef Bağlantı"
-              outlined
-              class="col q-mr-md"
-            />
+            <q-input v-model="form.title" label="Başlık" outlined class="col q-mr-md" />
+            <q-input v-model="form.targetLink" label="Hedef Bağlantı" outlined class="col" />
           </div>
 
           <q-editor

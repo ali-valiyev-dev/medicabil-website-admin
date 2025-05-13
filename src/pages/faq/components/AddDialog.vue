@@ -4,7 +4,7 @@
       <q-card-section>
         <div class="text-h6 text-grey-9 q-mb-md">Yeni Ekle</div>
         <q-form class="column">
-          <q-input v-model="form.question" label="Soru" autofocus outlined />
+          <q-input v-model="form.title" label="Başlık" autofocus outlined />
 
           <q-editor
             v-model="form.content"
@@ -120,7 +120,7 @@ import { storeToRefs } from 'pinia'
 const { nextOrder, showAddDialog } = storeToRefs(useFAQStore())
 
 const form = ref({
-  question: '',
+  title: '',
   date: new Date(),
   content: '',
   order: nextOrder.value,

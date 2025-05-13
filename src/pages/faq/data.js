@@ -1,7 +1,7 @@
 export const sampleData = [
   {
     id: 1,
-    question: 'Kanser nedir?',
+    title: 'Kanser nedir?',
     content:
       '### Kanser Nedir?\n kanser hakkında detaylı bilgi almak için [tıklayın](https://dev.medicabil.com/tr/mukemmeliyet-merkezi/).',
     isActive: true,
@@ -10,7 +10,7 @@ export const sampleData = [
   },
   {
     id: 2,
-    question: 'Uyku Laboratuvarı hizmetleri nelerdir?',
+    title: 'Uyku Laboratuvarı hizmetleri nelerdir?',
     content:
       '### Uyku Laboratuvarı Hizmetleri Nelerdir?\nUyku laboratuvarı hizmetlerimiz hakkında bilgi almak için [tıklayın](https://dev.medicabil.com/tr/mukemmeliyet-merkezi/).',
     isActive: true,
@@ -19,7 +19,7 @@ export const sampleData = [
   },
   {
     id: 3,
-    question: 'Saç Ekimi işlemleri nasıl yapılır?',
+    title: 'Saç Ekimi işlemleri nasıl yapılır?',
     content:
       '### Saç Ekimi İşlemleri Nasıl Yapılır?\nSaç ekimi işlemleri hakkında detaylı bilgi almak için [tıklayın](https://dev.medicabil.com/tr/mukemmeliyet-merkezi/).',
     isActive: false,
@@ -28,7 +28,7 @@ export const sampleData = [
   },
   {
     id: 4,
-    question: 'Omurga cerrahisi hakkında hangi detaylar bilinmelidir?',
+    title: 'Omurga cerrahisi hakkında hangi detaylar bilinmelidir?',
     content:
       '### Omurga Cerrahisi Hakkında Hangi Detaylar Bilinmelidir?\nOmurga cerrahisi hakkında detaylı bilgi almak için [tıklayın](https://dev.medicabil.com/tr/mukemmeliyet-merkezi/).',
     isActive: true,
@@ -37,7 +37,7 @@ export const sampleData = [
   },
   {
     id: 5,
-    question: 'Doktorlarımız hakkında nasıl bilgi alabilirim?',
+    title: 'Doktorlarımız hakkında nasıl bilgi alabilirim?',
     content:
       '### Doktorlarımız Hakkında Nasıl Bilgi Alabilirim?\nDoktorlarımız hakkında bilgi almak için [tıklayın](https://dev.medicabil.com/tr/mukemmeliyet-merkezi/).',
     isActive: false,
@@ -46,7 +46,7 @@ export const sampleData = [
   },
   {
     id: 6,
-    question: 'Fizik tedavi hizmetlerimiz nelerdir?',
+    title: 'Fizik tedavi hizmetlerimiz nelerdir?',
     content:
       '### Fizik Tedavi Hizmetlerimiz Nelerdir?\nFizik tedavi hizmetlerimiz hakkında bilgi almak için [tıklayın](https://dev.medicabil.com/tr/mukemmeliyet-merkezi/).',
     isActive: true,
@@ -55,7 +55,7 @@ export const sampleData = [
   },
   {
     id: 7,
-    question: 'Check-Up paketlerimiz neleri kapsar?',
+    title: 'Check-Up paketlerimiz neleri kapsar?',
     content:
       '### Check-Up Paketlerimiz Neleri Kapsar?\nCheck-Up paketlerimiz hakkında bilgi almak için [tıklayın](https://dev.medicabil.com/tr/mukemmeliyet-merkezi/).',
     isActive: true,
@@ -64,7 +64,7 @@ export const sampleData = [
   },
   {
     id: 8,
-    question: 'Ortopedi tedavilerimiz nelerdir?',
+    title: 'Ortopedi tedavilerimiz nelerdir?',
     content:
       '### Ortopedi Tedavilerimiz Nelerdir?\nOrtopedi tedavilerimiz hakkında bilgi almak için [tıklayın](https://dev.medicabil.com/tr/mukemmeliyet-merkezi/).',
     isActive: false,
@@ -73,7 +73,7 @@ export const sampleData = [
   },
   {
     id: 9,
-    question: 'Kardiyoloji hizmetlerimiz nelerdir?',
+    title: 'Kardiyoloji hizmetlerimiz nelerdir?',
     content:
       '### Kardiyoloji Hizmetlerimiz Nelerdir?\nKardiyoloji hizmetlerimiz hakkında bilgi almak için [tıklayın](https://dev.medicabil.com/tr/mukemmeliyet-merkezi/).',
     isActive: true,
@@ -82,7 +82,7 @@ export const sampleData = [
   },
   {
     id: 10,
-    question: 'Diyetisyen hizmetlerimiz nelerdir?',
+    title: 'Diyetisyen hizmetlerimiz nelerdir?',
     content:
       '### Diyetisyen Hizmetlerimiz Nelerdir?\nDiyetisyen hizmetlerimiz hakkında bilgi almak için [tıklayın](https://dev.medicabil.com/tr/mukemmeliyet-merkezi/).',
     isActive: true,

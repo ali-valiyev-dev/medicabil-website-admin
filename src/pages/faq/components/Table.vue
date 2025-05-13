@@ -109,7 +109,7 @@ const selectedRow = ref(null)
 
 const columns = ref([
   { name: 'id', label: '#', align: 'left', field: 'id' },
-  { name: 'question', label: 'Soru', align: 'left', field: 'question' },
+  { name: 'title', label: 'Başlık', align: 'left', field: 'title' },
   { name: 'status', label: 'Durum', align: 'center', field: 'status' },
   { name: 'order', label: 'Sıralama', align: 'center', field: 'order' },
   { name: 'date', label: 'Tarih', align: 'center', field: 'date' },
@@ -117,11 +117,11 @@ const columns = ref([
 ])
 
 const filteredRows = computed(() => {
-  const { question, statusFilter, sortOrder, date } = form.value
+  const { title, statusFilter, sortOrder, date } = form.value
   let filtered = rows.value
 
-  if (question) {
-    filtered = filtered.filter((row) => normalize(row.question).includes(normalize(question)))
+  if (title) {
+    filtered = filtered.filter((row) => normalize(row.title).includes(normalize(title)))
   }
 
   if (statusFilter === 'Aktif') {
