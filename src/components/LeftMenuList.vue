@@ -90,7 +90,7 @@ const menuItems = ref([
   },
   {
     to: '/physician',
-    icon: 'fa-solid fa-user-doctor',
+    icon: 'fa-solid fa-stethoscope',
     label: 'Observer Physicians',
   },
   {
@@ -102,6 +102,11 @@ const menuItems = ref([
     to: '/unit',
     icon: 'fa-solid fa-building',
     label: 'Üniteler',
+  },
+  {
+    to: '/doctor',
+    icon: 'fa-solid fa-user-doctor',
+    label: 'Hekimler',
   },
   // {
   //   icon: 'fa-solid fa-book-open',
