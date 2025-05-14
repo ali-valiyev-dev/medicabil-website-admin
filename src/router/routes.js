@@ -48,6 +48,10 @@ const routes = [
         path: 'service',
         children: [{ path: '', component: () => import('pages/service/index.vue') }],
       },
+      {
+        path: 'page',
+        children: [{ path: '', component: () => import('pages/page/index.vue') }],
+      },
     ],
   },
 

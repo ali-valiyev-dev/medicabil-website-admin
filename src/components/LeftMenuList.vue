@@ -113,6 +113,11 @@ const menuItems = ref([
     icon: 'fa-solid fa-briefcase-medical',
     label: 'Hizmet Alanı',
   },
+  {
+    to: '/page',
+    icon: 'fa-solid fa-file-lines',
+    label: 'Sayfa',
+  },
   // {
   //   icon: 'fa-solid fa-book-open',
   //   label: 'Rehber',
