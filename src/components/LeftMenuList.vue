@@ -93,6 +93,11 @@ const menuItems = ref([
     icon: 'fa-solid fa-user-doctor',
     label: 'Observer Physicians',
   },
+  {
+    to: '/vlog',
+    icon: 'fa-solid fa-video',
+    label: 'Vlog',
+  },
   // {
   //   icon: 'fa-solid fa-book-open',
   //   label: 'Rehber',

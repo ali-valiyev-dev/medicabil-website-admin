@@ -32,6 +32,10 @@ const routes = [
         path: 'physician',
         children: [{ path: '', component: () => import('pages/physician/index.vue') }],
       },
+      {
+        path: 'vlog',
+        children: [{ path: '', component: () => import('pages/vlog/index.vue') }],
+      },
     ],
   },
 
