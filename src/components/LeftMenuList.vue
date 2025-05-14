@@ -98,6 +98,11 @@ const menuItems = ref([
     icon: 'fa-solid fa-video',
     label: 'Vlog',
   },
+  {
+    to: '/unit',
+    icon: 'fa-solid fa-building',
+    label: 'Üniteler',
+  },
   // {
   //   icon: 'fa-solid fa-book-open',
   //   label: 'Rehber',

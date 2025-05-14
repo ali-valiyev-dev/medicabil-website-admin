@@ -36,6 +36,10 @@ const routes = [
         path: 'vlog',
         children: [{ path: '', component: () => import('pages/vlog/index.vue') }],
       },
+      {
+        path: 'unit',
+        children: [{ path: '', component: () => import('pages/unit/index.vue') }],
+      },
     ],
   },
 
