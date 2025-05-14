@@ -144,7 +144,7 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
-import { useNewsStore } from 'src/stores/dialogs/newsStore'
+import { usePhysicianStore } from 'src/stores/dialogs/physicianStore'
 import { storeToRefs } from 'pinia'
 import { marked } from 'marked'
 
@@ -152,7 +152,7 @@ const props = defineProps({
   row: Object,
 })
 
-const { showEditDialog } = storeToRefs(useNewsStore())
+const { showEditDialog } = storeToRefs(usePhysicianStore())
 
 const form = ref({})
 const uploaderRef = ref(null)

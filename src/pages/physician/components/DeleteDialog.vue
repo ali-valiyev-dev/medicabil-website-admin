@@ -38,14 +38,14 @@
 </template>
 
 <script setup>
-import { useNewsStore } from 'src/stores/dialogs/newsStore'
+import { usePhysicianStore } from 'src/stores/dialogs/physicianStore'
 import { storeToRefs } from 'pinia'
 
 const props = defineProps({
   rowId: Number,
 })
 
-const { showDeleteDialog } = storeToRefs(useNewsStore())
+const { showDeleteDialog } = storeToRefs(usePhysicianStore())
 
 const deleteSlide = () => {
   console.log('Deleting slide with ID:', props.rowId)

@@ -19,10 +19,10 @@
 </template>
 
 <script setup>
-import { useNewsStore } from 'src/stores/dialogs/newsStore'
+import { usePhysicianStore } from 'src/stores/dialogs/physicianStore'
 import { storeToRefs } from 'pinia'
 import { Filter, Table, AddDialog } from './components'
 import { PageHeader } from 'src/components'
 
-const { showAddDialog } = storeToRefs(useNewsStore())
+const { showAddDialog } = storeToRefs(usePhysicianStore())
 </script>

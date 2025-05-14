@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
 
-export const useBlogStore = defineStore('blogStore', () => {
+export const usePhysicianStore = defineStore('physicianStore', () => {
   const nextOrder = ref(0)
   const showAddDialog = ref(false)
   const showEditDialog = ref(false)

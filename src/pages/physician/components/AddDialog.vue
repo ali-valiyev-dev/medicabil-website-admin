@@ -144,12 +144,12 @@
 
 <script setup>
 import { ref } from 'vue'
-import { useNewsStore } from 'src/stores/dialogs/newsStore'
+import { usePhysicianStore } from 'src/stores/dialogs/physicianStore'
 import { storeToRefs } from 'pinia'
 
 const DEFAULT_TARGET_LINK = 'https://dev.medicabil.com/tr//'
 
-const { nextOrder, showAddDialog } = storeToRefs(useNewsStore())
+const { nextOrder, showAddDialog } = storeToRefs(usePhysicianStore())
 
 const form = ref({
   title: '',
