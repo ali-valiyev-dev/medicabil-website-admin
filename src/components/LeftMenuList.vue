@@ -108,6 +108,11 @@ const menuItems = ref([
     icon: 'fa-solid fa-user-doctor',
     label: 'Hekimler',
   },
+  {
+    to: '/service',
+    icon: 'fa-solid fa-briefcase-medical',
+    label: 'Hizmet Alanı',
+  },
   // {
   //   icon: 'fa-solid fa-book-open',
   //   label: 'Rehber',

@@ -44,6 +44,10 @@ const routes = [
         path: 'doctor',
         children: [{ path: '', component: () => import('pages/doctor/index.vue') }],
       },
+      {
+        path: 'service',
+        children: [{ path: '', component: () => import('pages/service/index.vue') }],
+      },
     ],
   },
 
