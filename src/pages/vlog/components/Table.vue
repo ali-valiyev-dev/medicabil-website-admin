@@ -29,12 +29,6 @@
       </q-td>
     </template>
 
-    <template #body-cell-image="props">
-      <q-td :props="props">
-        <q-img :src="props.row.image" alt="Görsel" />
-      </q-td>
-    </template>
-
     <template #body-cell-status="props">
       <q-td :props="props">
         <div class="text-body2" :class="props.row.isActive ? 'text-secondary' : 'text-red-5'">
