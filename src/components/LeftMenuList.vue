@@ -88,6 +88,11 @@ const menuItems = ref([
     icon: 'fa-solid fa-newspaper',
     label: 'Haber',
   },
+  {
+    to: '/physician',
+    icon: 'fa-solid fa-user-doctor',
+    label: 'Observer Physicians',
+  },
   // {
   //   icon: 'fa-solid fa-book-open',
   //   label: 'Rehber',

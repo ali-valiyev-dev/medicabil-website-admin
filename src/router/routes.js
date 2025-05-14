@@ -28,6 +28,10 @@ const routes = [
         path: 'news',
         children: [{ path: '', component: () => import('pages/news/index.vue') }],
       },
+      {
+        path: 'physician',
+        children: [{ path: '', component: () => import('pages/physician/index.vue') }],
+      },
     ],
   },
 
