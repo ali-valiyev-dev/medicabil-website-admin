@@ -105,7 +105,6 @@ const columns = ref([
   { name: 'id', label: '#', align: 'left', field: 'id' },
   { name: 'title', label: 'Başlık', align: 'left', field: 'title' },
   { name: 'description', label: 'Açıklama', align: 'left', field: 'description' },
-  { name: 'image', label: 'Görsel', align: 'center', field: 'image' },
   { name: 'status', label: 'Durum', align: 'center', field: 'status' },
   { name: 'order', label: 'Sıralama', align: 'center', field: 'order' },
   { name: 'date', label: 'Tarih', align: 'center', field: 'date' },
