@@ -127,14 +127,10 @@ const menuItems = ref([
     label: 'Yönlendirmeler',
   },
   {
-    to: '/reference',
-    icon: 'fa-solid fa-book',
-    label: 'Referanslar',
-  },
-  {
     icon: 'fa-solid fa-users',
     label: 'Diğer',
     children: [
+      { to: '/reference', label: 'Referanslar' },
       { to: '/cooperation', label: 'İşbirliği İşlemleri' },
       { to: '/online-forms', label: 'Online Formlar' },
       { to: '/observer-physician-forms', label: 'Observer Physician Forms' },
