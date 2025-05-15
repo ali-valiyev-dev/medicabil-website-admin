@@ -123,6 +123,11 @@ const menuItems = ref([
     icon: 'fa-solid fa-user',
     label: 'Kullanıcılar',
   },
+  {
+    to: '/redirect',
+    icon: 'fa-solid fa-square-arrow-up-right',
+    label: 'Yönlendirmeler',
+  },
   // {
   //   icon: 'fa-solid fa-book-open',
   //   label: 'Rehber',

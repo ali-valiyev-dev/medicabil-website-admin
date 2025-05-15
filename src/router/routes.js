@@ -56,6 +56,10 @@ const routes = [
         path: 'user',
         children: [{ path: '', component: () => import('pages/user/index.vue') }],
       },
+      {
+        path: 'redirect',
+        children: [{ path: '', component: () => import('pages/redirect/index.vue') }],
+      },
     ],
   },
 
