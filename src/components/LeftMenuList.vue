@@ -51,11 +51,6 @@ const menuItems = ref([
     icon: 'fa-solid fa-chart-pie',
     label: 'Pano',
   },
-  {
-    to: '/slider',
-    icon: 'fa-solid fa-image',
-    label: 'Slider',
-  },
   // {
   //   icon: 'fa-solid fa-book-open',
   //   label: 'Rehber',
@@ -63,6 +58,11 @@ const menuItems = ref([
   //     { to: '/rehber/haberler', label: 'Haberler' },
   //   ],
   // },
+  {
+    to: '/slider',
+    icon: 'fa-solid fa-image',
+    label: 'Slider',
+  },
   {
     to: '/faq',
     icon: 'fa-solid fa-circle-question',
@@ -129,17 +129,22 @@ const menuItems = ref([
     label: 'Yönlendirmeler',
   },
   {
-    to: '/settings',
-    icon: 'fa-solid fa-gear',
-    label: 'Ayarlar',
+    to: '/reference',
+    icon: 'fa-solid fa-book',
+    label: 'Referanslar',
   },
   // {
   //   icon: 'fa-solid fa-book-open',
-  //   label: 'Rehber',
+  //   label: 'Diğer',
   //   children: [
   //     { to: '/rehber/haberler', label: 'Haberler' },
   //   ],
   // },
+  {
+    to: '/settings',
+    icon: 'fa-solid fa-gear',
+    label: 'Ayarlar',
+  },
 ])
 
 function handleMenuItemClick(menuItem) {

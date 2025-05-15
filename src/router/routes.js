@@ -64,6 +64,10 @@ const routes = [
         path: 'settings',
         children: [{ path: '', component: () => import('pages/settings/index.vue') }],
       },
+      {
+        path: 'reference',
+        children: [{ path: '', component: () => import('pages/reference/index.vue') }],
+      },
     ],
   },
 
