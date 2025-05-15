@@ -118,6 +118,11 @@ const menuItems = ref([
     icon: 'fa-solid fa-file-lines',
     label: 'Sayfa',
   },
+  {
+    to: '/user',
+    icon: 'fa-solid fa-user',
+    label: 'Kullanıcılar',
+  },
   // {
   //   icon: 'fa-solid fa-book-open',
   //   label: 'Rehber',
