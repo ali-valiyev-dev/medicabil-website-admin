@@ -60,6 +60,10 @@ const routes = [
         path: 'redirect',
         children: [{ path: '', component: () => import('pages/redirect/index.vue') }],
       },
+      {
+        path: 'settings',
+        children: [{ path: '', component: () => import('pages/settings/index.vue') }],
+      },
     ],
   },
 

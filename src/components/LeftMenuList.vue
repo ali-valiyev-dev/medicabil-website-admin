@@ -128,6 +128,11 @@ const menuItems = ref([
     icon: 'fa-solid fa-square-arrow-up-right',
     label: 'Yönlendirmeler',
   },
+  {
+    to: '/settings',
+    icon: 'fa-solid fa-gear',
+    label: 'Ayarlar',
+  },
   // {
   //   icon: 'fa-solid fa-book-open',
   //   label: 'Rehber',
