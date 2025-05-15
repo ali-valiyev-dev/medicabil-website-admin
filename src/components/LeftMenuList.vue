@@ -1,5 +1,5 @@
 <template>
-  <q-scroll-area class="fit q-pt-xl" :horizontal-thumb-style="{ opacity: 0 }">
+  <q-scroll-area class="fit q-pt-lg" :horizontal-thumb-style="{ opacity: 0 }">
     <q-list>
       <div
         v-for="menuItem in menuItems"
@@ -51,13 +51,11 @@ const menuItems = ref([
     icon: 'fa-solid fa-chart-pie',
     label: 'Pano',
   },
-  // {
-  //   icon: 'fa-solid fa-book-open',
-  //   label: 'Rehber',
-  //   children: [
-  //     { to: '/rehber/haberler', label: 'Haberler' },
-  //   ],
-  // },
+  {
+    icon: 'fa-solid fa-object-group',
+    label: 'Görünüm',
+    // children: [{ to: '/', label: '' }],
+  },
   {
     to: '/slider',
     icon: 'fa-solid fa-image',
@@ -133,13 +131,15 @@ const menuItems = ref([
     icon: 'fa-solid fa-book',
     label: 'Referanslar',
   },
-  // {
-  //   icon: 'fa-solid fa-book-open',
-  //   label: 'Diğer',
-  //   children: [
-  //     { to: '/rehber/haberler', label: 'Haberler' },
-  //   ],
-  // },
+  {
+    icon: 'fa-solid fa-users',
+    label: 'Diğer',
+    children: [
+      { to: '/cooperation', label: 'İşbirliği İşlemleri' },
+      { to: '/online-forms', label: 'Online Formlar' },
+      { to: '/observer-physician-forms', label: 'Observer Physician Forms' },
+    ],
+  },
   {
     to: '/settings',
     icon: 'fa-solid fa-gear',

@@ -61,12 +61,26 @@ const routes = [
         children: [{ path: '', component: () => import('pages/redirect/index.vue') }],
       },
       {
-        path: 'settings',
-        children: [{ path: '', component: () => import('pages/settings/index.vue') }],
-      },
-      {
         path: 'reference',
         children: [{ path: '', component: () => import('pages/reference/index.vue') }],
+      },
+      {
+        path: 'cooperation',
+        children: [{ path: '', component: () => import('pages/cooperation/index.vue') }],
+      },
+      // {
+      //   path: 'online-forms',
+      //   children: [{ path: '', component: () => import('pages/online-forms/index.vue') }],
+      // },
+      // {
+      //   path: 'observer-physician-forms',
+      //   children: [
+      //     { path: '', component: () => import('pages/observer-physician-forms/index.vue') },
+      //   ],
+      // },
+      {
+        path: 'settings',
+        children: [{ path: '', component: () => import('pages/settings/index.vue') }],
       },
     ],
   },
