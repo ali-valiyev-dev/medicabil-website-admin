@@ -2,9 +2,17 @@
   <q-page padding>
     <q-card flat class="row justify-between">
       <PageHeader :breadcrumbs="[{ label: 'Yönlendirmeler' }]" />
+      <q-btn
+        unelevated
+        noCaps
+        color="secondary"
+        label="Kaydet"
+        icon="fa-solid fa-save"
+        :disable="!isChanged"
+        @click="saveSettings"
+      />
     </q-card>
     <q-form class="row gap q-mt-lg">
-      <!-- col-1 -->
       <div class="column col gap">
         <q-input outlined label="Site URL Adresi" v-model="form.siteUrl" />
         <q-input outlined label="Uygulama İsmi" v-model="form.appName" />
@@ -27,7 +35,6 @@
         />
       </div>
 
-      <!-- col-2 -->
       <div class="column col gap">
         <q-input
           outlined
@@ -44,7 +51,6 @@
         <q-input outlined label="Contact Form | Mail to" v-model="form.contactFormMail" />
       </div>
 
-      <!-- col-3 -->
       <div class="column col gap">
         <q-input outlined label="Twitter" v-model="form.twitter" />
         <q-input outlined label="Facebook" v-model="form.facebook" />
@@ -58,36 +64,35 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import { PageHeader } from 'src/components'
+import { sampleData } from './data'
 
-const form = ref({
-  siteUrl: 'https://www.medicabil.com',
-  appName: 'Medicabil',
-  emailSenderName: 'Medicabil',
-  emailSenderAddress: 'noreply@medicabildevde.com',
-  adminEmail: 'santral@medicabil.com',
-  reportErrors: '',
-  twitter: 'https://twitter.com/Medicabil',
-  facebook: 'https://www.facebook.com/Medicabil',
-  googleAnalytics: 'UA-97870502-1',
-  viber: '905323360868',
-  foreignContactEmails: 'samet.bilgen@medicabil.com,medicabilhastanesi@gmail.com',
-  thesisFormMail: 'aysun.yilmazlar@medicabil.com, ik@medicabil.com',
-  foreignFormsMail: 'medicabilhastanesi@gmail.com,samet.bilgen@medicabil.com',
-  visitorPhysicianFormMail: 'samet.bilgen@medicabil.com,medicabilhastanesi@gmail.com',
-  siteVerification: '',
-  supportEmail: 'info@medicabil.com',
-  supervisorMail: 'info@medicabil.com,medicabilhastanesi@gmail.com,samet.bilgen@medicabil.com',
-  youtube: 'https://www.youtube.com/user/medicabilhastanesi',
-  instagram: 'https://www.instagram.com/medicabil/',
-  githubSecret: '',
-  googleTagManager: 'GTM-TG48TZD',
-  whatsapp: '905323360868',
-  onlineDrFormMail: 'medicabilhastanesi@gmail.com,samet.bilgen@medicabil.com',
-  jobFormMail: 'medicabilhastanesi@gmail.com',
-  contactFormMail: 'info@medicabil.com,medicabilhastanesi@gmail.com',
-})
+function fetchSettings() {
+  return Promise.resolve({ ...sampleData })
+}
+
+const form = ref({})
+
+const originalForm = ref({})
+
+function isDeepEqual(obj1, obj2) {
+  return JSON.stringify(obj1) === JSON.stringify(obj2)
+}
+
+const isChanged = computed(() => !isDeepEqual(form.value, originalForm.value))
+
+async function loadSettings() {
+  const data = await fetchSettings()
+  form.value = { ...data }
+  originalForm.value = { ...data }
+}
+
+function saveSettings() {
+  originalForm.value = { ...form.value }
+}
+
+onMounted(loadSettings)
 </script>
 
 <style scoped>
