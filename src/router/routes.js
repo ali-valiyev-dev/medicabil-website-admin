@@ -72,16 +72,12 @@ const routes = [
         path: 'online-forms',
         children: [{ path: '', component: () => import('pages/online-forms/index.vue') }],
       },
-      // {
-      //   path: 'online-forms',
-      //   children: [{ path: '', component: () => import('pages/online-forms/index.vue') }],
-      // },
-      // {
-      //   path: 'observer-physician-forms',
-      //   children: [
-      //     { path: '', component: () => import('pages/observer-physician-forms/index.vue') },
-      //   ],
-      // },
+      {
+        path: 'observer-physician-forms',
+        children: [
+          { path: '', component: () => import('pages/observer-physician-forms/index.vue') },
+        ],
+      },
       {
         path: 'settings',
         children: [{ path: '', component: () => import('pages/settings/index.vue') }],
