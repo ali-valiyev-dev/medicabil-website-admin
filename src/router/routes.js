@@ -68,6 +68,10 @@ const routes = [
         path: 'cooperation',
         children: [{ path: '', component: () => import('pages/cooperation/index.vue') }],
       },
+      {
+        path: 'online-forms',
+        children: [{ path: '', component: () => import('pages/online-forms/index.vue') }],
+      },
       // {
       //   path: 'online-forms',
       //   children: [{ path: '', component: () => import('pages/online-forms/index.vue') }],
