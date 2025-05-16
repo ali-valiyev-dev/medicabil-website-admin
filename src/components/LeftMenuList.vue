@@ -118,7 +118,7 @@ const menuItems = ref([
   },
   {
     to: '/user',
-    icon: 'fa-solid fa-user',
+    icon: 'fa-solid fa-user-group',
     label: 'Kullanıcılar',
   },
   {
@@ -127,7 +127,7 @@ const menuItems = ref([
     label: 'Yönlendirmeler',
   },
   {
-    icon: 'fa-solid fa-users',
+    icon: 'fa-solid fa-ellipsis-h',
     label: 'Diğer',
     children: [
       { to: '/reference', label: 'Referanslar' },
