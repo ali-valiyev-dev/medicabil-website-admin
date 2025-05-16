@@ -29,7 +29,7 @@
           dense
           padding="sm lg"
           color="red-5"
-          @click="deleteSlide"
+          @click="deleteItem"
           class="col"
         />
       </q-card-actions>
@@ -47,7 +47,7 @@ const props = defineProps({
 
 const { showDeleteDialog } = storeToRefs(useReferenceStore())
 
-const deleteSlide = () => {
+const deleteItem = () => {
   console.log('Deleting slide with ID:', props.rowId)
   showDeleteDialog.value = false
 }

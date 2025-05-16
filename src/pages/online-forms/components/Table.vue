@@ -111,8 +111,8 @@ const columns = ref([
   { name: 'date', label: 'Tarih', align: 'center', field: 'date' },
   { name: 'time', label: 'Saat', align: 'center', field: 'time' },
   { name: 'confirmDate', label: 'Onay Tarihi', align: 'center', field: 'confirmDate' },
-  { name: 'actionStatus', label: 'Durum', align: 'center', field: 'actionStatus' },
-  { name: 'paymentDetails', label: 'Ödeme Detayları', align: 'center', field: 'paymentDetails' },
+  { name: 'actionStatus', label: 'İşlem Durumu', align: 'center', field: 'actionStatus' },
+  { name: 'paymentDetails', label: 'Ödeme Bilgileri', align: 'center', field: 'paymentDetails' },
   { name: 'createdAt', label: 'Oluşturulma Tarihi', align: 'center', field: 'createdAt' },
   { name: 'actions', label: 'İşlem', align: 'center' },
 ])

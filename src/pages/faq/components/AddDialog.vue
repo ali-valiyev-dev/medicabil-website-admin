@@ -109,7 +109,7 @@
           dense
           padding="sm lg"
           color="secondary"
-          @click="addSlide"
+          @click="addItem"
           class="col-1"
         />
       </q-card-actions>
@@ -132,7 +132,7 @@ const form = ref({
   isActive: true,
 })
 
-const addSlide = () => {
+const addItem = () => {
   console.log('Form data:', form.value)
   showAddDialog.value = false
 }
