@@ -28,10 +28,10 @@ const routes = [
         path: 'pdf',
         children: [{ path: '', component: () => import('pages/pdf/index.vue') }],
       },
-      // {
-      //   path: 'popup',
-      //   children: [{ path: '', component: () => import('pages/popup/index.vue') }],
-      // },
+      {
+        path: 'popup',
+        children: [{ path: '', component: () => import('pages/popup/index.vue') }],
+      },
       // {
       //   path: 'prefix',
       //   children: [{ path: '', component: () => import('pages/prefix/index.vue') }],
