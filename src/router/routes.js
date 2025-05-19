@@ -13,6 +13,10 @@ const routes = [
         children: [{ path: '', component: () => import('pages/header-menu/index.vue') }],
       },
       {
+        path: 'footer-menu',
+        children: [{ path: '', component: () => import('pages/footer-menu/index.vue') }],
+      },
+      {
         path: 'faq',
         children: [{ path: '', component: () => import('pages/faq/index.vue') }],
       },
