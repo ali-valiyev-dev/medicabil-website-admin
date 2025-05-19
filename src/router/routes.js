@@ -17,6 +17,10 @@ const routes = [
         children: [{ path: '', component: () => import('pages/footer-menu/index.vue') }],
       },
       {
+        path: 'homepage-settings',
+        children: [{ path: '', component: () => import('pages/homepage-settings/index.vue') }],
+      },
+      {
         path: 'faq',
         children: [{ path: '', component: () => import('pages/faq/index.vue') }],
       },

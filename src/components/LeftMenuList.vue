@@ -57,6 +57,7 @@ const menuItems = ref([
     children: [
       { to: '/header-menu', label: 'Üst Menü' },
       { to: '/footer-menu', label: 'Alt Menü' },
+      { to: '/homepage-settings', label: 'Ana Sayfa Ayarları' },
     ],
   },
   {
