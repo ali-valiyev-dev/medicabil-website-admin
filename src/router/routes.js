@@ -25,6 +25,10 @@ const routes = [
         children: [{ path: '', component: () => import('pages/gallery/index.vue') }],
       },
       {
+        path: 'pdf',
+        children: [{ path: '', component: () => import('pages/pdf/index.vue') }],
+      },
+      {
         path: 'faq',
         children: [{ path: '', component: () => import('pages/faq/index.vue') }],
       },
