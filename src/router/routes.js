@@ -28,6 +28,39 @@ const routes = [
         path: 'pdf',
         children: [{ path: '', component: () => import('pages/pdf/index.vue') }],
       },
+      // {
+      //   path: 'popup',
+      //   children: [{ path: '', component: () => import('pages/popup/index.vue') }],
+      // },
+      // {
+      //   path: 'prefix',
+      //   children: [{ path: '', component: () => import('pages/prefix/index.vue') }],
+      // },
+      // {
+      //   path: 'hospital',
+      //   children: [{ path: '', component: () => import('pages/hospital/index.vue') }],
+      // },
+      // {
+      //   path: 'magazine',
+      //   children: [{ path: '', component: () => import('pages/magazine/index.vue') }],
+      // },
+      //  {
+      //   path: 'videotab',
+      //   children: [{ path: '', component: () => import('pages/videotab/index.vue') }],
+      // },
+      //  {
+      //   path: 'homeservice',
+      //   children: [{ path: '', component: () => import('pages/homeservice/index.vue') }],
+      // },
+      //  {
+      //   path: 'cookietext',
+      //   children: [{ path: '', component: () => import('pages/cookietext/index.vue') }],
+      // },
+      //  {
+      //   path: 'address',
+      //   children: [{ path: '', component: () => import('pages/address/index.vue') }],
+      // },
+
       {
         path: 'faq',
         children: [{ path: '', component: () => import('pages/faq/index.vue') }],
