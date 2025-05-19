@@ -21,6 +21,10 @@ const routes = [
         children: [{ path: '', component: () => import('pages/homepage-settings/index.vue') }],
       },
       {
+        path: 'gallery',
+        children: [{ path: '', component: () => import('pages/gallery/index.vue') }],
+      },
+      {
         path: 'faq',
         children: [{ path: '', component: () => import('pages/faq/index.vue') }],
       },
