@@ -38,10 +38,10 @@
 </template>
 
 <script setup>
-import { useMenuStore } from 'src/stores/dialogs/menuStore'
+import { useHeaderMenuStore } from 'src/stores/dialogs/headerMenuStore'
 import { storeToRefs } from 'pinia'
 
-const { showDeleteDialog } = storeToRefs(useMenuStore())
+const { showDeleteDialog } = storeToRefs(useHeaderMenuStore())
 
 const emit = defineEmits(['confirm'])
 const deleteItem = () => {

@@ -54,7 +54,7 @@ const menuItems = ref([
   {
     icon: 'fa-solid fa-object-group',
     label: 'Görünüm',
-    children: [{ to: '/menu', label: 'Menü' }],
+    children: [{ to: '/header-menu', label: 'Üst Menü' }],
   },
   {
     to: '/slider',

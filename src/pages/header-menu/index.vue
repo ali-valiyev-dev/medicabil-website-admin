@@ -1,7 +1,7 @@
 <template>
   <q-page padding>
     <q-card flat class="row justify-between">
-      <PageHeader :breadcrumbs="[{ label: 'Menü İşlemleri' }]" />
+      <PageHeader :breadcrumbs="[{ label: 'Üst Menü İşlemleri' }]" />
       <q-btn
         unelevated
         noCaps
@@ -81,10 +81,10 @@ import { uid } from 'quasar'
 import { AddDialog, EditDialog, DeleteDialog } from './components'
 import { PageHeader } from 'src/components'
 import { sampleData } from './data'
-import { useMenuStore } from 'src/stores/dialogs/menuStore'
+import { useHeaderMenuStore } from 'src/stores/dialogs/headerMenuStore'
 import { storeToRefs } from 'pinia'
 
-const { showAddDialog, showEditDialog, showDeleteDialog } = storeToRefs(useMenuStore())
+const { showAddDialog, showEditDialog, showDeleteDialog } = storeToRefs(useHeaderMenuStore())
 
 const selected = ref(null)
 const addTargetId = ref(null)

@@ -1,8 +1,8 @@
 <template>
-  <q-dialog v-model="showAddDialog" persistent>
+  <q-dialog v-model="showEditDialog" persistent>
     <q-card style="width: 100%">
       <q-card-section>
-        <div class="text-h6 text-grey-9 q-mb-md">Yeni Ekle</div>
+        <div class="text-h6 text-grey-9 q-mb-md">Düzenle</div>
         <q-form class="column">
           <q-input v-model="localForm.label" label="Başlık" autofocus outlined />
           <q-input v-model="localForm.link" label="Link" outlined />
@@ -26,17 +26,17 @@
           padding="sm lg"
           color="grey-9"
           class="col-2"
-          @click="showAddDialog = false"
+          @click="showEditDialog = false"
         />
 
         <q-btn
-          label="Ekle"
+          label="Düzenle"
           no-caps
           unelevated
           dense
           padding="sm lg"
           color="secondary"
-          @click="addItem"
+          @click="editItem"
           class="col-2"
         />
       </q-card-actions>
@@ -46,21 +46,21 @@
 
 <script setup>
 import { reactive } from 'vue'
-import { useMenuStore } from 'src/stores/dialogs/menuStore'
+import { useHeaderMenuStore } from 'src/stores/dialogs/headerMenuStore'
 import { storeToRefs } from 'pinia'
 
 const props = defineProps({
   form: Object,
 })
 
-const { showAddDialog } = storeToRefs(useMenuStore())
+const { showEditDialog } = storeToRefs(useHeaderMenuStore())
 
 const localForm = reactive(props.form)
 
-const emit = defineEmits(['add'])
+const emit = defineEmits(['edit'])
 
-const addItem = () => {
-  emit('add')
+const editItem = () => {
+  emit('edit')
 }
 </script>
 

@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
 
-export const useMenuStore = defineStore('menuStore', () => {
+export const useHeaderMenuStore = defineStore('headerMenuStore', () => {
   const showAddDialog = ref(false)
   const showEditDialog = ref(false)
   const showDeleteDialog = ref(false)

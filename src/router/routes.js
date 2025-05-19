@@ -9,8 +9,8 @@ const routes = [
         children: [{ path: '', component: () => import('pages/slider/index.vue') }],
       },
       {
-        path: 'menu',
-        children: [{ path: '', component: () => import('pages/menu/index.vue') }],
+        path: 'header-menu',
+        children: [{ path: '', component: () => import('pages/header-menu/index.vue') }],
       },
       {
         path: 'faq',
