@@ -32,10 +32,10 @@ const routes = [
         path: 'popup',
         children: [{ path: '', component: () => import('pages/popup/index.vue') }],
       },
-      // {
-      //   path: 'prefix',
-      //   children: [{ path: '', component: () => import('pages/prefix/index.vue') }],
-      // },
+      {
+        path: 'prefix',
+        children: [{ path: '', component: () => import('pages/prefix/index.vue') }],
+      },
       // {
       //   path: 'hospital',
       //   children: [{ path: '', component: () => import('pages/hospital/index.vue') }],
