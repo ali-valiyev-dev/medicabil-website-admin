@@ -127,6 +127,11 @@ const menuItems = ref([
     label: 'Yönlendirmeler',
   },
   {
+    to: '/settings',
+    icon: 'fa-solid fa-gear',
+    label: 'Ayarlar',
+  },
+  {
     icon: 'fa-solid fa-ellipsis-h',
     label: 'Diğer',
     children: [
@@ -135,11 +140,6 @@ const menuItems = ref([
       { to: '/online-forms', label: 'Online Formlar' },
       { to: '/observer-physician-forms', label: 'Observer Physician Forms' },
     ],
-  },
-  {
-    to: '/settings',
-    icon: 'fa-solid fa-gear',
-    label: 'Ayarlar',
   },
 ])
 
