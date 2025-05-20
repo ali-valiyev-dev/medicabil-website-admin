@@ -3,13 +3,15 @@ import { ref } from 'vue'
 
 export const useFilterStore = defineStore('filter', () => {
   const form = ref({
-    title: '',
-    date: null,
+    sortOrder: 'Yüksek Öncelikten',
+    statusFilter: 'Hepsi',
   })
 
   const resetForm = () => {
     form.value = {
       title: '',
+      sortOrder: 'Yüksek Öncelikten',
+      statusFilter: 'Hepsi',
       date: null,
     }
   }
