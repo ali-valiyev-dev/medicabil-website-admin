@@ -78,7 +78,7 @@
     </q-page-container>
 
     <q-footer bordered class="bg-white text-center">
-      <div class="text-subtitle2 text-grey-9 q-py-md">© 2022 Medicabil - All Rights Reserved.</div>
+      <div class="text-body2 text-grey-9 q-py-md">© 2022 Medicabil - All Rights Reserved.</div>
     </q-footer>
   </q-layout>
 </template>
