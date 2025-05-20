@@ -13,6 +13,7 @@
             hide-upload-btn
             class="full-width"
             thumbnail-fit="contain"
+            color="secondary"
           />
 
           <q-input v-model="form.description" label="Açıklama" outlined />

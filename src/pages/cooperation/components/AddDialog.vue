@@ -16,6 +16,7 @@
             hide-upload-btn
             class="full-width"
             thumbnail-fit="contain"
+            color="secondary"
           />
         </q-form>
       </q-card-section>

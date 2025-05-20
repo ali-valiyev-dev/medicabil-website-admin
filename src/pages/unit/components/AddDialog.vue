@@ -77,6 +77,7 @@
             hide-upload-btn
             class="full-width"
             thumbnail-fit="contain"
+            color="secondary"
           />
 
           <q-input v-model="form.targetLink" label="Hedef Bağlantı" outlined class="col" />

@@ -76,6 +76,7 @@
             hide-upload-btn
             class="full-width"
             thumbnail-fit="contain"
+            color="secondary"
           />
 
           <div class="row items-start no-wrap">
