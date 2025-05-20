@@ -1,7 +1,7 @@
 <template>
   <q-page padding>
     <q-card flat class="row justify-between">
-      <PageHeader :breadcrumbs="[{ label: 'Yönlendirmeler' }]" />
+      <PageHeader :breadcrumbs="[{ label: 'Ayarlar' }]" />
       <q-btn
         unelevated
         noCaps
