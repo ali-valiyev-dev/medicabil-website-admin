@@ -16,7 +16,7 @@ const routes = [
       { path: 'video-tab', component: () => import('pages/video-tab/index.vue') },
       { path: 'home-service', component: () => import('pages/home-service/index.vue') },
       { path: 'cookie-text', component: () => import('pages/cookie-text/index.vue') },
-      // { path: 'address', component: () => import('pages/address/index.vue') },
+      { path: 'address', component: () => import('pages/address/index.vue') },
       { path: 'slider', component: () => import('pages/slider/index.vue') },
       { path: 'faq', component: () => import('pages/faq/index.vue') },
       {
