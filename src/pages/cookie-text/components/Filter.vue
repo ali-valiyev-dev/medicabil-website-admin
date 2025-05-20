@@ -68,7 +68,7 @@ const formattedDate = computed(() => {
   return ''
 })
 
-const statusOptions = ['Hepsi', 'Aktif', 'Devre dışı']
+const statusOptions = ['Tümü', 'Aktif', 'Devre dışı']
 </script>
 
 <style scoped>

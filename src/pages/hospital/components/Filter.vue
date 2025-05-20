@@ -35,7 +35,7 @@ import { storeToRefs } from 'pinia'
 const { form } = storeToRefs(useFilterStore())
 const { resetForm } = useFilterStore()
 
-const statusOptions = ['Hepsi', 'Aktif', 'Devre dışı']
+const statusOptions = ['Tümü', 'Aktif', 'Devre dışı']
 const sortOptions = ['Yüksek Öncelikten', 'Düşük Öncelikten']
 </script>
 
