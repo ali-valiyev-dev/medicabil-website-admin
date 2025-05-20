@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="hHh lpR fFf">
+  <q-layout view="hHh lpR lFr">
     <Header v-model:drawerLeft="drawerLeft" v-model:drawerRight="drawerRight" />
 
     <q-drawer
@@ -76,6 +76,10 @@
     <q-page-container>
       <router-view />
     </q-page-container>
+
+    <q-footer bordered class="bg-white text-center">
+      <div class="text-subtitle2 text-grey-9 q-py-md">© 2022 Medicabil - All Rights Reserved.</div>
+    </q-footer>
   </q-layout>
 </template>
 
