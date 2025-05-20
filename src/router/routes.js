@@ -4,142 +4,46 @@ const routes = [
     component: () => import('layouts/MainLayout.vue'),
     children: [
       { path: '', component: () => import('pages/dashboard/index.vue') },
-      {
-        path: 'slider',
-        children: [{ path: '', component: () => import('pages/slider/index.vue') }],
-      },
-      {
-        path: 'header-menu',
-        children: [{ path: '', component: () => import('pages/header-menu/index.vue') }],
-      },
-      {
-        path: 'footer-menu',
-        children: [{ path: '', component: () => import('pages/footer-menu/index.vue') }],
-      },
-      {
-        path: 'homepage-settings',
-        children: [{ path: '', component: () => import('pages/homepage-settings/index.vue') }],
-      },
-      {
-        path: 'gallery',
-        children: [{ path: '', component: () => import('pages/gallery/index.vue') }],
-      },
-      {
-        path: 'pdf',
-        children: [{ path: '', component: () => import('pages/pdf/index.vue') }],
-      },
-      {
-        path: 'popup',
-        children: [{ path: '', component: () => import('pages/popup/index.vue') }],
-      },
-      {
-        path: 'prefix',
-        children: [{ path: '', component: () => import('pages/prefix/index.vue') }],
-      },
-      // {
-      //   path: 'hospital',
-      //   children: [{ path: '', component: () => import('pages/hospital/index.vue') }],
-      // },
-      // {
-      //   path: 'magazine',
-      //   children: [{ path: '', component: () => import('pages/magazine/index.vue') }],
-      // },
-      //  {
-      //   path: 'videotab',
-      //   children: [{ path: '', component: () => import('pages/videotab/index.vue') }],
-      // },
-      //  {
-      //   path: 'homeservice',
-      //   children: [{ path: '', component: () => import('pages/homeservice/index.vue') }],
-      // },
-      //  {
-      //   path: 'cookietext',
-      //   children: [{ path: '', component: () => import('pages/cookietext/index.vue') }],
-      // },
-      //  {
-      //   path: 'address',
-      //   children: [{ path: '', component: () => import('pages/address/index.vue') }],
-      // },
-
-      {
-        path: 'faq',
-        children: [{ path: '', component: () => import('pages/faq/index.vue') }],
-      },
+      { path: 'header-menu', component: () => import('pages/header-menu/index.vue') },
+      { path: 'footer-menu', component: () => import('pages/footer-menu/index.vue') },
+      { path: 'homepage-settings', component: () => import('pages/homepage-settings/index.vue') },
+      { path: 'gallery', component: () => import('pages/gallery/index.vue') },
+      { path: 'pdf', component: () => import('pages/pdf/index.vue') },
+      { path: 'popup', component: () => import('pages/popup/index.vue') },
+      { path: 'prefix', component: () => import('pages/prefix/index.vue') },
+      // { path: 'hospital', component: () => import('pages/hospital/index.vue') },
+      // { path: 'magazine', component: () => import('pages/magazine/index.vue') },
+      // { path: 'videotab', component: () => import('pages/videotab/index.vue') },
+      // { path: 'homeservice', component: () => import('pages/homeservice/index.vue') },
+      // { path: 'cookietext', component: () => import('pages/cookietext/index.vue') },
+      // { path: 'address', component: () => import('pages/address/index.vue') },
+      { path: 'slider', component: () => import('pages/slider/index.vue') },
+      { path: 'faq', component: () => import('pages/faq/index.vue') },
       {
         path: 'center-of-excellence',
-        children: [{ path: '', component: () => import('pages/center-of-excellence/index.vue') }],
+        component: () => import('pages/center-of-excellence/index.vue'),
       },
-      {
-        path: 'blog',
-        children: [{ path: '', component: () => import('pages/blog/index.vue') }],
-      },
-      {
-        path: 'step-page',
-        children: [{ path: '', component: () => import('pages/step-page/index.vue') }],
-      },
-      {
-        path: 'news',
-        children: [{ path: '', component: () => import('pages/news/index.vue') }],
-      },
-      {
-        path: 'physician',
-        children: [{ path: '', component: () => import('pages/physician/index.vue') }],
-      },
-      {
-        path: 'vlog',
-        children: [{ path: '', component: () => import('pages/vlog/index.vue') }],
-      },
-      {
-        path: 'unit',
-        children: [{ path: '', component: () => import('pages/unit/index.vue') }],
-      },
-      {
-        path: 'doctor',
-        children: [{ path: '', component: () => import('pages/doctor/index.vue') }],
-      },
-      {
-        path: 'service',
-        children: [{ path: '', component: () => import('pages/service/index.vue') }],
-      },
-      {
-        path: 'page',
-        children: [{ path: '', component: () => import('pages/page/index.vue') }],
-      },
-      {
-        path: 'user',
-        children: [{ path: '', component: () => import('pages/user/index.vue') }],
-      },
-      {
-        path: 'redirect',
-        children: [{ path: '', component: () => import('pages/redirect/index.vue') }],
-      },
-      {
-        path: 'reference',
-        children: [{ path: '', component: () => import('pages/reference/index.vue') }],
-      },
-      {
-        path: 'cooperation',
-        children: [{ path: '', component: () => import('pages/cooperation/index.vue') }],
-      },
-      {
-        path: 'online-forms',
-        children: [{ path: '', component: () => import('pages/online-forms/index.vue') }],
-      },
+      { path: 'blog', component: () => import('pages/blog/index.vue') },
+      { path: 'step-page', component: () => import('pages/step-page/index.vue') },
+      { path: 'news', component: () => import('pages/news/index.vue') },
+      { path: 'physician', component: () => import('pages/physician/index.vue') },
+      { path: 'vlog', component: () => import('pages/vlog/index.vue') },
+      { path: 'unit', component: () => import('pages/unit/index.vue') },
+      { path: 'doctor', component: () => import('pages/doctor/index.vue') },
+      { path: 'service', component: () => import('pages/service/index.vue') },
+      { path: 'page', component: () => import('pages/page/index.vue') },
+      { path: 'user', component: () => import('pages/user/index.vue') },
+      { path: 'redirect', component: () => import('pages/redirect/index.vue') },
+      { path: 'reference', component: () => import('pages/reference/index.vue') },
+      { path: 'cooperation', component: () => import('pages/cooperation/index.vue') },
+      { path: 'online-forms', component: () => import('pages/online-forms/index.vue') },
       {
         path: 'observer-physician-forms',
-        children: [
-          { path: '', component: () => import('pages/observer-physician-forms/index.vue') },
-        ],
+        component: () => import('pages/observer-physician-forms/index.vue'),
       },
-      {
-        path: 'settings',
-        children: [{ path: '', component: () => import('pages/settings/index.vue') }],
-      },
+      { path: 'settings', component: () => import('pages/settings/index.vue') },
     ],
   },
-
-  // Always leave this as last one,
-  // but you can also remove it
   {
     path: '/:catchAll(.*)*',
     component: () => import('pages/not-found/index.vue'),
