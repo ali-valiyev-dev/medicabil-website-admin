@@ -19,8 +19,8 @@
 
       <q-space />
 
+      <ContentLanguage class="q-mr-md" />
       <q-btn flat round icon="settings" @click="toggleDrawer('drawerRight')" />
-
       <q-btn-dropdown flat rounded noCaps>
         <q-list>
           <q-item clickable v-close-popup>
@@ -51,6 +51,8 @@
 </template>
 
 <script setup>
+import ContentLanguage from './ContentLanguage.vue'
+
 const props = defineProps(['drawerLeft', 'drawerRight'])
 const emit = defineEmits(['update:drawerLeft', 'update:drawerRight'])
 
